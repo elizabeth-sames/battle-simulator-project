@@ -51,7 +51,7 @@ public abstract class Character implements Attacker {
     }
 
     public boolean isAlive() {
-        return isAlive;
+        return this.hp > 0;
     }
 
     public int getHp() {
