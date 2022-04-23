@@ -61,13 +61,13 @@ public class Wizard extends Character{
     //METHODS
     public int attack() {
         int damage = this.intelligence;
-        if(this.intelligence>5){
+        if(this.mana >= 5){
             //Fireball
             this.mana = this.mana - 5;
             return damage;
         } else {
             //Staff hit
-            this.mana = this.mana - 1;
+            this.mana = this.mana + 1;
             return 2;
         }
     }
