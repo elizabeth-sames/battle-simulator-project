@@ -59,14 +59,14 @@ public class Warrior extends Character {
 
     //METHODS
     public int attack() {
-        int damage = this.stamina;
-        if(this.stamina>5){
+        int damage = this.strength;
+        if(this.stamina >= 5){
             //Heavy attack
-            this.stamina = this.strength - 5;
+            this.stamina -= 5;
             return damage;
         } else {
             //Weak attack
-            this.stamina = this.stamina - 1;
+            this.stamina += 1;
             return damage/2;
         }
     }
