@@ -2,12 +2,17 @@ package classes;
 
 import interfaces.Attacker;
 
+import java.util.random.RandomGenerator;
+
 public abstract class Character implements Attacker {
     private int id; //use int or other type???
     private String name;
     private int hp;
     private boolean isAlive;
 
+
+
+    //CONSTRUCTOR
     public Character(int id, String name, int hp) {
         this.id = id;
         this.name = name;
@@ -15,35 +20,41 @@ public abstract class Character implements Attacker {
         this.isAlive = true;
     }
 
-    public int getId() {
-        return id;
+
+
+    //SETTERS
+    public void setHp(int hp){
+        this.hp = hp;
     }
 
     public void setId(int id) {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public void setAlive(boolean alive) {
+        isAlive = alive;
     }
 
     public void setName(String name) {
         this.name = name;
     }
 
-    public int getHp() {
-        return hp;
+
+
+    //GETTERS
+    public int getId() {
+        return id;
     }
 
-    public void setHp(int hp) {
-        this.hp = hp;
+    public String getName() {
+        return name;
     }
 
     public boolean isAlive() {
         return isAlive;
     }
 
-    public void setAlive(boolean alive) {
-        isAlive = alive;
+    public int getHp() {
+        return hp;
     }
 }
