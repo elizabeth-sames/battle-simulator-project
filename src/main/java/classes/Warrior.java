@@ -44,7 +44,11 @@ public class Warrior extends Character {
         }
     }
 
-
+    @Override
+    public String toString() {
+        return this.getName() + " (Warrior)     hp: " + this.getHp() + "     stamina: " + this.stamina
+                + "     strength:" + strength;
+    }
 
     //GETTERS
     public int getStamina() {

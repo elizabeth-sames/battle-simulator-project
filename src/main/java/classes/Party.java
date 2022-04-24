@@ -3,6 +3,7 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Party {
     private List<Object> members;
@@ -59,6 +60,23 @@ public class Party {
             };
         };
     };
+
+//    public void makeCustomParty() {
+//        while(this.members.size()<4){
+//            Scanner scanner = new Scanner(System.in);
+//            System.out.println("type R to make a Warrior or Z to make a Wizard ");
+//            String type = scanner.nextLine().toUpperCase();
+//            if(type == "R"){
+//                System.out.println("Please name your Warrior");
+//                String name = scanner.nextLine();
+//                //continue with hp, stamina, and strength
+//                Warrior newWarrior = new Warrior(name, hp, stamina, strength);
+//                members.add(newWarrior);
+//            } else if (type == "Z"){
+//                //similar code here, but for wizard
+//            }
+//        }
+//    }
 
     public List<Object> getMembers() {
         return members;

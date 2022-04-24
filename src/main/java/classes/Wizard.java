@@ -46,6 +46,11 @@ public class Wizard extends Character{
         }
     }
 
+    @Override
+    public String toString() {
+        return this.getName() + " (Wizard)     hp: " + this.getHp() + "     mana: " + this.mana
+                + "     intelligence:" + intelligence;
+    }
 
 
     //GETTERS
