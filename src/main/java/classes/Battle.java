@@ -80,7 +80,7 @@ public class Battle {
         }else{
                 //Here goes victory or defeat method
             }
-            //####LOGIC####//
+
         //While there is at least one member in each party do:
         //Choose a member from each party to duel against one each other
         //Call attack method to both members
