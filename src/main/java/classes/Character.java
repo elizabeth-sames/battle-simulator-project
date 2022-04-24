@@ -9,12 +9,15 @@ public abstract class Character implements Attacker {
     private String name;
     private int hp;
     private boolean isAlive;
+    private static int totalCharacterCount = 0;
+
 
 
 
     //CONSTRUCTOR
-    public Character(int id, String name, int hp) {
-        this.id = id;
+    public Character(String name, int hp) {
+        totalCharacterCount++;
+        this.id = totalCharacterCount;
         this.name = name;
         this.hp = hp;
         this.isAlive = true;

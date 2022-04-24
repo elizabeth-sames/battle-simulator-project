@@ -9,8 +9,8 @@ public class Wizard extends Character{
 
     
     //CONSTRUCTOR
-    public Wizard(int id, String name, int hp, int mana, int intelligence) {
-        super(id, name, hp);
+    public Wizard(String name, int hp, int mana, int intelligence) {
+        super(name, hp);
         this.mana = mana;
         this.intelligence = intelligence;
         setIntelligence(intelligence);
