@@ -153,6 +153,7 @@ public class Party {
         this.members = members;
     }
 
+
     @Override
     public String toString() {
         return this.members.get(0).toString() + "\n" + this.members.get(1).toString() + "\n"
