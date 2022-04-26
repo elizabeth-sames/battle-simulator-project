@@ -18,6 +18,11 @@ public class Wizard extends Character{
         setMana(mana);
     }
 
+    public Wizard() {
+    }
+
+
+
 
 
     //SETTERS

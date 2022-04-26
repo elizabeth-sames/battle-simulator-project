@@ -145,6 +145,76 @@ public class Party {
         scanner2.close();
     }
 
+    public void makeCsvParty1(){
+        List<String> usedNames = new ArrayList<>();
+        while(this.members.size() < 4){
+            Scanner scanner = new Scanner("party1.csv");
+            while(scanner.hasNextLine()) {
+                String data = scanner.nextLine();
+                String[] dataArray = data.split(",");
+                if(dataArray[0] == "Warrior") {
+                    Warrior newWarrior = new Warrior();
+                    newWarrior.setName(dataArray[2]);
+                    if(usedNames.contains(newWarrior.getName())){
+                        newWarrior.setName(newWarrior.getName() + "Jr");
+                    }
+                    usedNames.add(newWarrior.getName());
+                    newWarrior.setHp(Integer.parseInt(dataArray[3]));
+                    newWarrior.setStamina(Integer.parseInt(dataArray[5]));
+                    newWarrior.setStrength(Integer.parseInt(dataArray[6]));
+                    this.members.add(newWarrior);
+                } else {
+                    Wizard newWizard = new Wizard();
+                    newWizard.setName(dataArray[2]);
+                    if(usedNames.contains(newWizard.getName())){
+                        newWizard.setName(newWizard.getName() + "Jr");
+                    }
+                    usedNames.add(newWizard.getName());
+                    newWizard.setHp(Integer.parseInt(dataArray[3]));
+                    newWizard.setMana(Integer.parseInt(dataArray[7]));
+                    newWizard.setIntelligence(Integer.parseInt(dataArray[8]));
+                    this.members.add(newWizard);
+                }
+            }
+            scanner.close();
+        }
+    }
+
+    public void makeCsvParty2(){
+        List<String> usedNames = new ArrayList<>();
+        while(this.members.size() < 4){
+            Scanner scanner = new Scanner("party2.csv");
+            while(scanner.hasNextLine()) {
+                String data = scanner.nextLine();
+                String[] dataArray = data.split(",");
+                if(dataArray[0] == "Warrior") {
+                    Warrior newWarrior = new Warrior();
+                    newWarrior.setName(dataArray[2]);
+                    if(usedNames.contains(newWarrior.getName())){
+                        newWarrior.setName(newWarrior.getName() + "Jr");
+                    }
+                    usedNames.add(newWarrior.getName());
+                    newWarrior.setHp(Integer.parseInt(dataArray[3]));
+                    newWarrior.setStamina(Integer.parseInt(dataArray[5]));
+                    newWarrior.setStrength(Integer.parseInt(dataArray[6]));
+                    this.members.add(newWarrior);
+                } else {
+                    Wizard newWizard = new Wizard();
+                    newWizard.setName(dataArray[2]);
+                    if(usedNames.contains(newWizard.getName())){
+                        newWizard.setName(newWizard.getName() + "Jr");
+                    }
+                    usedNames.add(newWizard.getName());
+                    newWizard.setHp(Integer.parseInt(dataArray[3]));
+                    newWizard.setMana(Integer.parseInt(dataArray[7]));
+                    newWizard.setIntelligence(Integer.parseInt(dataArray[8]));
+                    this.members.add(newWizard);
+                }
+            }
+            scanner.close();
+        }
+    }
+
     public List<Object> getMembers() {
         return members;
     }

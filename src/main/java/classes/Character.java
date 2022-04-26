@@ -23,7 +23,8 @@ public abstract class Character implements Attacker {
         this.isAlive = true;
     }
 
-
+    public Character() {
+    }
 
     //SETTERS
     public void setHp(int hp){
