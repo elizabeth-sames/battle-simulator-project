@@ -3,10 +3,9 @@ package classes;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Party {
-    private List<Object> members;
+    private List<Character> members;
     static String[] warriorNames = {"Milo", "Bertha", "Evander", "Sena", "Walter", "Hilda", "Marco", "Zelda", "Kane", "Magda",
             "Ragnar", "Otto", "Gunner", "Imelda", "Luther", "Clovis", "Igor", "Gert", "Harold", "Lou"};
     static String[] wizardNames = {"Albus", "Alva", "Bertram", "Circe", "Fredo", "Glinda", "Lazar", "Vesta", "Merlin", "Olive",
@@ -78,12 +77,21 @@ public class Party {
 //        }
 //    }
 
-    public List<Object> getMembers() {
+    public List<Character> getMembers() {
         return members;
     }
 
-    public void setMembers(List<Object> members) {
+    //to get the size of Party
+    public int getSize(){return members.size();}
+
+
+    public void setMembers(List<Character> members) {
         this.members = members;
+    }
+
+    //method to remove the character in Battle
+    public void removeMember(int removeIndex){
+         this.members.remove(removeIndex);
     }
 
     @Override
