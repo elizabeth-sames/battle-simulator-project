@@ -16,6 +16,11 @@ public class Warrior extends Character {
         setHp(hp);
     }
 
+    public Warrior() {
+    }
+
+
+
 
 
     //SETTERS
