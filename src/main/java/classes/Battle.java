@@ -31,6 +31,7 @@ public class Battle {
 
     //Remove method
 
+<<<<<<< HEAD
 
     public Party removeDeadCharacterFromParty(Party party, int characterIndex){
         if( party == null || characterIndex < 0 || characterIndex >= party.getSize()){
@@ -62,10 +63,29 @@ public class Battle {
             } else {
 
                 partyWithOutTheDeadCharacter.add(party.get(i));
+=======
+
+    public Party removeDeadCharacterFromParty(Party party, int characterIndex) {
+        if (party == null || characterIndex < 0 || characterIndex >= party.getSize()) {
+
+            public Party removeDeadCharacterFromParty (Party party,int characterIndex){
+                if (party.getMembers() == null || characterIndex < 0 || characterIndex >= party.getMembers().size()) {
+
+                    System.out.println("The character is not born yet!");
+                    return party;
+                }
+                //alternate code (the ArrayList size should change automatically as items are removed):
+                party.getMembers().remove(characterIndex);
+
+
+                party.removeMember(characterIndex);
+                return party;
+
+>>>>>>> a890368b2c955fe8a41273adf8bf541bb53c16b1
             }
-            return partyWithOutTheDeadCharacter;
 
 
+<<<<<<< HEAD
         }*/
 
             }
@@ -97,9 +117,20 @@ public class Battle {
         while(playersParty.getSize() > 0 &&  oponentsParty.getSize() > 0){
             int randomPlayerIndex = new Random().nextInt(playersParty.getSize());
             int randomOponentIndex = new Random().nextInt(oponentsParty.getSize());
+=======
+            public void twoPlayersFight ( int indexPlayer, int indexOponent){
+                Character players = playersParty.getMembers().get(indexPlayer);
+                Character oponents = oponentsParty.getMembers().get(indexOponent);
 
-    public void fight() {
+                while (players.isAlive() && oponents.isAlive()) {
+                    int damageCausedByPlayer = players.attack();
+                    int damageCausedByOponent = oponents.attack();
+>>>>>>> a890368b2c955fe8a41273adf8bf541bb53c16b1
 
+                    players.setHp(players.getHp() - damageCausedByOponent);
+                    oponents.setHp(oponents.getHp() - damageCausedByPlayer);
+
+<<<<<<< HEAD
         while (playersParty.getMembers().size() > 0 && oponentsParty.getMembers().size() > 0) {
             int randomPlayerIndex = new Random().nextInt(playersParty.getMembers().size());
             int randomOponentIndex = new Random().nextInt(oponentsParty.getMembers().size());
@@ -123,6 +154,20 @@ public class Battle {
                 //Here goes victory or defeat method
             }*/
 
+=======
+                }
+                if (!players.isAlive()) {
+                    playersParty = removeDeadCharacterFromParty(playersParty, indexPlayer);
+                    //add randomPlayer to graveyard
+                }
+                if (!oponents.isAlive()) {
+                    oponentsParty = removeDeadCharacterFromParty(oponentsParty, indexOponent);
+                    //add randomOponent to graveyard
+                }
+            }
+
+
+>>>>>>> a890368b2c955fe8a41273adf8bf541bb53c16b1
             if (!randomPlayer.isAlive()) {
                 playersParty = removeDeadCharacterFromParty(playersParty, randomPlayerIndex);
                 //add randomPlayer to graveyard
@@ -133,6 +178,12 @@ public class Battle {
                 //add randomOponent to graveyard
                 System.out.println(randomPlayer.getName() + " has won this fight!");
             }
+
+
         }
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> a890368b2c955fe8a41273adf8bf541bb53c16b1
