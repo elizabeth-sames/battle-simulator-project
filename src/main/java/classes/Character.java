@@ -28,6 +28,9 @@ public abstract class Character implements Attacker {
     //SETTERS
     public void setHp(int hp){
         this.hp = hp;
+        if(hp <= 0) {
+            this.isAlive = false;
+        }
     }
 
     public void setId(int id) {
