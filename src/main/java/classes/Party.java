@@ -61,22 +61,89 @@ public class Party {
         };
     };
 
-//    public void makeCustomParty() {
-//        while(this.members.size()<4){
-//            Scanner scanner = new Scanner(System.in);
-//            System.out.println("type R to make a Warrior or Z to make a Wizard ");
-//            String type = scanner.nextLine().toUpperCase();
-//            if(type == "R"){
-//                System.out.println("Please name your Warrior");
-//                String name = scanner.nextLine();
-//                //continue with hp, stamina, and strength
-//                Warrior newWarrior = new Warrior(name, hp, stamina, strength);
-//                members.add(newWarrior);
-//            } else if (type == "Z"){
-//                //similar code here, but for wizard
-//            }
-//        }
-//    }
+    public void makeCustomParty() {
+        Scanner scanner2= new Scanner(System.in);
+        while(this.members.size()<4) {
+            System.out.println(
+                    "Please, choose a new member for your party" +
+                    "\nEnter Warrior or Wizard"
+            );
+            String character = scanner2.next().toLowerCase();
+            while (!character.equals("wizard") && !character.equals("warrior")) {
+                System.err.println("This character does not exist.");
+                System.err.println("Please, choose between warrior and wizard");
+                character = scanner2.next();
+            }
+            System.out.println("You have chosen " + character);
+            System.out.println("Please, choose a name for your " + character);
+            String name = scanner2.next();
+            System.out.println(name + " is a new " + character + " of your party");
+
+            //make a warrior
+            if (character.equals("warrior")) {
+                System.out.println("Now choose a number between 100-200 representing the health points");
+                int hp = scanner2.nextInt();
+
+                while (hp < 100 || hp > 200) {
+                    System.err.println("Choose 100-200");
+                    hp = scanner2.nextInt();
+                }
+                System.out.println(name + " has " + hp + " of health points");
+
+                System.out.println(("Choose stamina between 10 and 50"));
+                int stamina = scanner2.nextInt();
+
+                while (stamina < 10 || stamina > 50) {
+                    System.err.println("Choose 10-50");
+                    stamina = scanner2.nextInt();
+                }
+                System.out.println(name + " has " + stamina + " of stamina");
+
+                System.out.println((name + " needs an strength between 1 and 10"));
+                int strength = scanner2.nextInt();
+
+                while (strength < 1 || strength > 10) {
+                    System.err.println("Choose 1-10");
+                    strength = scanner2.nextInt();
+                }
+
+                Warrior warrior = new Warrior(name, hp, stamina, strength);
+                System.out.println(warrior);
+                this.members.add(warrior);
+            } else {
+                //make a wizard
+                System.out.println("Now choose a number between 50-100 representing the health points");
+                int hp = scanner2.nextInt();
+
+                while (hp < 50 || hp > 100) {
+                    System.err.println("Choose 50-100");
+                    hp = scanner2.nextInt();
+                }
+                System.out.println(name + " has " + hp + "of health points");
+
+                System.out.println((name + " needs mana between 10 and 50"));
+                int mana = scanner2.nextInt();
+                while (mana < 10 || mana > 50) {
+                    System.err.println("Choose a number between 10 and 50");
+                    mana = scanner2.nextInt();
+                }
+                System.out.println(name + " has an health point of " + mana);
+
+                System.out.println("Please, choose intelligence for " + name + " a number between 1 and 50");
+                int intelligence = scanner2.nextInt();
+                while (intelligence < 1 || intelligence > 50) {
+                    System.err.println("Choose a number between 1 and 50");
+                    intelligence = scanner2.nextInt();
+                }
+                System.out.println(name + " has an health point of " + intelligence);
+
+                Wizard wizard = new Wizard(name, hp, mana, intelligence);
+                System.out.println(wizard);
+                this.members.add(wizard);
+            }
+        }
+        scanner2.close();
+    }
 
     public List<Object> getMembers() {
         return members;

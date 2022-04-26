@@ -1,46 +1,50 @@
 package classes;
 
+import java.lang.management.PlatformLoggingMXBean;
 import java.util.ArrayList;
 import java.util.Random;
 
 public class Battle {
-    private ArrayList playersParty;
-    private ArrayList oponentsParty;
+    private Party playersParty;
+    private Party oponentsParty;
 
-    public Battle(ArrayList playersParty, ArrayList oponentsParty) {
+    public Battle(Party playersParty, Party oponentsParty) {
         this.playersParty = playersParty;
         this.oponentsParty = oponentsParty;
     }
 
-    public ArrayList getPlayersParty() {
+    public Party getPlayersParty() {
         return playersParty;
     }
 
-    public ArrayList getOponentsParty() {
+    public Party getOponentsParty() {
         return oponentsParty;
     }
 
-    public void setPlayersParty(ArrayList playersParty) {
+    public void setPlayersParty(Party playersParty) {
         this.playersParty = playersParty;
     }
 
-    public void setOponentsParty(ArrayList oponentsParty) {
+    public void setOponentsParty(Party oponentsParty) {
         this.oponentsParty = oponentsParty;
     }
 
     //Remove method
 
-    public ArrayList removeDeadCharacterFromParty(ArrayList party, int characterIndex){
-        if( party == null || characterIndex < 0 || characterIndex >= party.size()){
+    public Party removeDeadCharacterFromParty(Party party, int characterIndex) {
+        if (party.getMembers() == null || characterIndex < 0 || characterIndex >= party.getMembers().size()) {
             System.out.println("The character is not born yet!");
             return party;
         }
+        //alternate code (the ArrayList size should change automatically as items are removed):
+        party.getMembers().remove(characterIndex);
+
         // Create another array of size one less
-        ArrayList partyWithOutTheDeadCharacter = new ArrayList(party.size()-1);
-        for(int i=0; i< party.size();i++){
-            if(i == characterIndex) {
-            continue;
-            }else{
+        ArrayList partyWithOutTheDeadCharacter = new ArrayList(party.size() - 1);
+        for (int i = 0; i < party.size(); i++) {
+            if (i == characterIndex) {
+                continue;
+            } else {
                 partyWithOutTheDeadCharacter.add(party.get(i));
             }
             return partyWithOutTheDeadCharacter;
@@ -50,36 +54,36 @@ public class Battle {
 
     }
 
-    public void fight(){
+    public void fight() {
 
-        while(playersParty.size() > 0 &&  oponentsParty.size() > 0){
-            int randomPlayerIndex = new Random().nextInt(playersParty.size());
-            int randomOponentIndex = new Random().nextInt(oponentsParty.size());
+        while (playersParty.getMembers().size() > 0 && oponentsParty.getMembers().size() > 0) {
+            int randomPlayerIndex = new Random().nextInt(playersParty.getMembers().size());
+            int randomOponentIndex = new Random().nextInt(oponentsParty.getMembers().size());
 
-            int randomPlayer = playersParty.get(randomPlayerIndex).getId();//to access the ID
-            int randomOponent = oponentsParty.get(randomOponentIndex).getId();
+            //can't create a Character... need to add characterType to attributes to differentiate
+            // which are warriors and which are wizards in order to create appropriate variables for them...
+            Character randomPlayer = playersParty.getMembers().get(randomPlayerIndex);
+            Character randomOponent = oponentsParty.getMembers().get(randomOponentIndex);
 
-            while(randomPlayer.isAlive() && randomOponent.isAlive()) {
+            while (randomPlayer.isAlive() && randomOponent.isAlive()) {
                 int damageCausedByPlayer = randomPlayer.attack();
                 int damageCausedByOponent = randomOponent.attack();
 
                 randomPlayer.setHp(randomPlayer.getHp() - damageCausedByOponent);
                 randomOponent.setHp(randomOponent.getHp() - damageCausedByPlayer);
-
-
-            }else{
-                if(!randomPlayer.isAlive()){
-                    playersParty = removeDeadCharacterFromParty(playersParty, randomPlayerIndex);
-                    //add randomPlayer to graveyard
-                }
-                if(!randomOponent.isAlive()){
-                    oponentsParty = removeDeadCharacterFromParty(oponentsParty, randomOponentIndex);
-                    //add randomOponent to graveyard
             }
-
-        }else{
-                //Here goes victory or defeat method
+            if (!randomPlayer.isAlive()) {
+                playersParty = removeDeadCharacterFromParty(playersParty, randomPlayerIndex);
+                //add randomPlayer to graveyard
+                System.out.println(randomOponent.getName() + " has won this fight!");
             }
+            if (!randomOponent.isAlive()) {
+                oponentsParty = removeDeadCharacterFromParty(oponentsParty, randomOponentIndex);
+                //add randomOponent to graveyard
+                System.out.println(randomPlayer.getName() + " has won this fight!");
+            }
+        }
+
 
         //While there is at least one member in each party do:
         //Choose a member from each party to duel against one each other
@@ -90,5 +94,6 @@ public class Battle {
         //Else if at least one party is empty call method winner and defeat method.
 
     }
+}
 
 
