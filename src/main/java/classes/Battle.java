@@ -31,47 +31,49 @@ public class Battle {
 
     //Remove method
 
+
     public Party removeDeadCharacterFromParty(Party party, int characterIndex) {
-        if (party.getMembers() == null || characterIndex < 0 || characterIndex >= party.getMembers().size()) {
-            System.out.println("The character is not born yet!");
-            return party;
-        }
-        //alternate code (the ArrayList size should change automatically as items are removed):
-        party.getMembers().remove(characterIndex);
+        if (party == null || characterIndex < 0 || characterIndex >= party.getSize()) {
 
-        // Create another array of size one less
-        ArrayList partyWithOutTheDeadCharacter = new ArrayList(party.size() - 1);
-        for (int i = 0; i < party.size(); i++) {
-            if (i == characterIndex) {
-                continue;
-            } else {
-                partyWithOutTheDeadCharacter.add(party.get(i));
+            public Party removeDeadCharacterFromParty (Party party,int characterIndex){
+                if (party.getMembers() == null || characterIndex < 0 || characterIndex >= party.getMembers().size()) {
+
+                    System.out.println("The character is not born yet!");
+                    return party;
+                }
+                //alternate code (the ArrayList size should change automatically as items are removed):
+                party.getMembers().remove(characterIndex);
+
+
+                party.removeMember(characterIndex);
+                return party;
+
             }
-            return partyWithOutTheDeadCharacter;
 
 
-        }
+            public void twoPlayersFight ( int indexPlayer, int indexOponent){
+                Character players = playersParty.getMembers().get(indexPlayer);
+                Character oponents = oponentsParty.getMembers().get(indexOponent);
 
-    }
+                while (players.isAlive() && oponents.isAlive()) {
+                    int damageCausedByPlayer = players.attack();
+                    int damageCausedByOponent = oponents.attack();
 
-    public void fight() {
+                    players.setHp(players.getHp() - damageCausedByOponent);
+                    oponents.setHp(oponents.getHp() - damageCausedByPlayer);
 
-        while (playersParty.getMembers().size() > 0 && oponentsParty.getMembers().size() > 0) {
-            int randomPlayerIndex = new Random().nextInt(playersParty.getMembers().size());
-            int randomOponentIndex = new Random().nextInt(oponentsParty.getMembers().size());
-
-            //can't create a Character... need to add characterType to attributes to differentiate
-            // which are warriors and which are wizards in order to create appropriate variables for them...
-            Character randomPlayer = playersParty.getMembers().get(randomPlayerIndex);
-            Character randomOponent = oponentsParty.getMembers().get(randomOponentIndex);
-
-            while (randomPlayer.isAlive() && randomOponent.isAlive()) {
-                int damageCausedByPlayer = randomPlayer.attack();
-                int damageCausedByOponent = randomOponent.attack();
-
-                randomPlayer.setHp(randomPlayer.getHp() - damageCausedByOponent);
-                randomOponent.setHp(randomOponent.getHp() - damageCausedByPlayer);
+                }
+                if (!players.isAlive()) {
+                    playersParty = removeDeadCharacterFromParty(playersParty, indexPlayer);
+                    //add randomPlayer to graveyard
+                }
+                if (!oponents.isAlive()) {
+                    oponentsParty = removeDeadCharacterFromParty(oponentsParty, indexOponent);
+                    //add randomOponent to graveyard
+                }
             }
+
+
             if (!randomPlayer.isAlive()) {
                 playersParty = removeDeadCharacterFromParty(playersParty, randomPlayerIndex);
                 //add randomPlayer to graveyard
@@ -82,18 +84,9 @@ public class Battle {
                 //add randomOponent to graveyard
                 System.out.println(randomPlayer.getName() + " has won this fight!");
             }
+
+
         }
 
-
-        //While there is at least one member in each party do:
-        //Choose a member from each party to duel against one each other
-        //Call attack method to both members
-        //Check if they are alive, if they are still alive they keep attacking until one is dead.
-        //If one of the members is dead send it to graveyard and remove it from the party (The other member stays in its party).
-
-        //Else if at least one party is empty call method winner and defeat method.
-
-    }
-}
 
 
