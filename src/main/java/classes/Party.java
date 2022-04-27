@@ -190,6 +190,15 @@ public class Party {
         this.members = members;
     }
 
+    //Get size of the party
+    public int getSize(){return members.size();}
+
+    //Remove character in Battle
+    public void removeMember(int removeIndex){
+        this.members.remove(removeIndex);
+    }
+
+
 
     @Override
     public String toString() {
