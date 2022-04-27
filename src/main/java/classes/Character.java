@@ -14,6 +14,7 @@ public abstract class Character implements Attacker {
 
 
 
+
     //CONSTRUCTOR
     public Character(String name, int hp) {
         totalCharacterCount++;
@@ -21,6 +22,7 @@ public abstract class Character implements Attacker {
         this.name = name;
         this.hp = hp;
         this.isAlive = true;
+
     }
 
     public Character() {
@@ -48,6 +50,8 @@ public abstract class Character implements Attacker {
 
 
 
+
+
     //GETTERS
     public int getId() {
         return id;
@@ -64,4 +68,6 @@ public abstract class Character implements Attacker {
     public int getHp() {
         return hp;
     }
+
+
 }

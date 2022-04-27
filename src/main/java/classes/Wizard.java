@@ -5,7 +5,7 @@ import java.util.random.RandomGenerator;
 public class Wizard extends Character{
     private int mana;
     private int intelligence;
-
+    private final String characterType = "Wizard";
 
     
     //CONSTRUCTOR
@@ -20,9 +20,6 @@ public class Wizard extends Character{
 
     public Wizard() {
     }
-
-
-
 
 
     //SETTERS

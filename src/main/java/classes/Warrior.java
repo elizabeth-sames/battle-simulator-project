@@ -3,6 +3,8 @@ package classes;
 public class Warrior extends Character {
     private int stamina;
     private int strength;
+    private final String characterType = "Warrior";
+
 
 
 
@@ -18,9 +20,6 @@ public class Warrior extends Character {
 
     public Warrior() {
     }
-
-
-
 
 
     //SETTERS
@@ -54,6 +53,8 @@ public class Warrior extends Character {
             super.setHp(200);
         }
     }
+
+
 
     @Override
     public String toString() {
