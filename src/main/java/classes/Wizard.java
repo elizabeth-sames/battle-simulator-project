@@ -45,7 +45,10 @@ public class Wizard extends Character{
 
     @Override
     public void setHp(int hp){
-        if(hp >= 50 || hp <= 100){
+        if(hp <=0){
+            super.setHp(0);
+            super.setAlive(false);
+        } else if(hp >= 50 || hp <= 100){
             super.setHp(hp);
         } else if (hp < 50){
             super.setHp(50);
@@ -56,8 +59,8 @@ public class Wizard extends Character{
 
     @Override
     public String toString() {
-        return this.getName() + " (Wizard)     hp: " + this.getHp() + "     mana: " + this.mana
-                + "     intelligence:" + intelligence;
+        return this.getName() + " (Wizard)  hp: " + this.getHp() + "  mana: " + this.mana
+                + "  intelligence:" + intelligence;
     }
 
 
@@ -74,7 +77,7 @@ public class Wizard extends Character{
     //METHODS
     public int attack() {
         int damage = this.intelligence;
-        if(this.mana >= 5){
+        if(this.mana > 5){
             //Fireball
             this.mana = this.mana - 5;
             return damage;
