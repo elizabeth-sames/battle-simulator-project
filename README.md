@@ -1,6 +1,4 @@
-# battle-simulator-project
-
-Hi there! We are happy you are goint to play the game we created. It's going to be exciting! :)
+# Hi there! We are happy you are goint to play the battle game we created. It's going to be exciting! :)
 
 Before you start, our team wants to explain you a little bit how it is going to work, so keep reading.
 
