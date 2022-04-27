@@ -45,12 +45,13 @@ public class Warrior extends Character {
 
     @Override
     public void setHp(int hp){
-        if(hp >= 100 && hp <= 200){
+        if(hp <=0){
+            super.setHp(0);
+            super.setAlive(false);
+        } else if(hp >= 100 && hp <= 200){
             super.setHp(hp);
-        } else if(hp < 100){
-            super.setHp(100);
         } else {
-            super.setHp(200);
+            super.setHp(hp);
         }
     }
 
@@ -58,8 +59,8 @@ public class Warrior extends Character {
 
     @Override
     public String toString() {
-        return this.getName() + " (Warrior)     hp: " + this.getHp() + "     stamina: " + this.stamina
-                + "     strength:" + strength;
+        return this.getName() + " (Warrior)  hp: " + this.getHp() + "  stamina: " + this.stamina
+                + "  strength:" + strength;
     }
 
     //GETTERS
@@ -76,14 +77,14 @@ public class Warrior extends Character {
     //METHODS
     public int attack() {
         int damage = this.strength;
-        if(this.stamina >= 5){
+        if(this.stamina > 5){
             //Heavy attack
-            this.stamina -= 5;
+            this.stamina = this.stamina - 5;
             return damage;
         } else {
             //Weak attack
             this.stamina += 1;
-            return damage/2;
+            return (int) damage/2;
         }
     }
 

@@ -1,79 +1,87 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Battle {
     private Party playersParty;
-    private Party oponentsParty;
-   ArrayList<String> graveyardList = new ArrayList<>();
+    private Party opponentsParty;
+    private List<Object> graveyardList = new ArrayList<>();
 
-    public Battle(Party playersParty, Party oponentsParty) {
+    public Battle(Party playersParty, Party opponentsParty) {
         this.playersParty = playersParty;
-        this.oponentsParty = oponentsParty;
+        this.opponentsParty = opponentsParty;
     }
 
     public Party getPlayersParty() {
         return playersParty;
     }
 
-    public Party getOponentsParty() {
-        return oponentsParty;
+    public Party getOpponentsParty() {
+        return opponentsParty;
     }
 
     public void setPlayersParty(Party playersParty) {
         this.playersParty = playersParty;
     }
 
-    public void setOponentsParty(Party oponentsParty) {
-        this.oponentsParty = oponentsParty;
+    public void setOpponentsParty(Party opponentsParty) {
+        this.opponentsParty = opponentsParty;
     }
 
     //Remove method
-    public Party removeDeadCharacterFromParty(Party party, int characterIndex){
-        if( party == null || characterIndex < 0 || characterIndex >= party.getSize()) {
 
-            public Party removeDeadCharacterFromParty (Party party,int characterIndex){
-                if (party.getMembers() == null || characterIndex < 0 || characterIndex >= party.getMembers().size()) {
+    public Party removeDeadCharacterFromParty (Party party,int characterIndex) {
+        if (party.getMembers() == null || characterIndex < 0 || characterIndex >= party.getMembers().size()) {
 
-                    System.out.println("The character is not born yet!");
-                    return party;
-                }
-                //alternate code (the ArrayList size should change automatically as items are removed):
-                party.getMembers().remove(characterIndex);
+            System.out.println("The character is not born yet!");
+            return party;
+        } else {
+            //alternate code (the ArrayList size should change automatically as items are removed):
+            party.getMembers().remove(characterIndex);
 
-                party.removeMember(characterIndex);
-                return party;
-
-            }
-
-
-            public void twoPlayersFight(int indexPlayer, int indexOponent){
-                Character players = (Character) playersParty.getMembers().get(indexPlayer);
-                Character oponents = (Character) oponentsParty.getMembers().get(indexOponent);
-
-                while (players.isAlive() && oponents.isAlive()) {
-                    int damageCausedByPlayer = players.attack();
-                    int damageCausedByOponent = oponents.attack();
-
-                    players.setHp(players.getHp() - damageCausedByOponent);
-                    oponents.setHp(oponents.getHp() - damageCausedByPlayer);
-
-                }
-
-                if (!players.isAlive()) {
-                    playersParty = removeDeadCharacterFromParty(playersParty, indexPlayer);
-                    //add randomPlayer to graveyard
-                    System.out.println(oponents.getName() + " has won this fight!");
-                }
-                if (!oponents.isAlive()) {
-                    oponentsParty = removeDeadCharacterFromParty(oponentsParty, indexOponent);
-                    //add randomOponent to graveyard
-                    System.out.println(players.getName() + " has won this fight!");
-                }
-
-
-            }
+            party.removeMember(characterIndex);
+            return party;
         }
+    }
+
+    public List<Object> getGraveyardList() {
+        return graveyardList;
+    }
+
+    public void twoPlayersFight(int indexPlayer, int indexOpponent){
+        Character players = (Character) playersParty.getMembers().get(indexPlayer);
+        Character opponents = (Character) opponentsParty.getMembers().get(indexOpponent);
+
+        int round =1;
+        while (players.isAlive() && opponents.isAlive()) {
+            int damageCausedByPlayer = players.attack();
+            int damageCausedByOpponent = opponents.attack();
+
+            players.setHp(players.getHp() - damageCausedByOpponent);
+            opponents.setHp(opponents.getHp() - damageCausedByPlayer);
+            System.out.println("Round " + round + ":   \n" +
+                     players.toString() + "\n" +
+                     opponents.toString());
+
+            if (!players.isAlive()) {
+                graveyardList.add(playersParty.getMembers().get(indexPlayer));
+                //playersParty = removeDeadCharacterFromParty(playersParty, indexPlayer);
+                playersParty.getMembers().remove(indexPlayer);
+                System.out.println("Your opponent has won this fight");
+            }
+            if (!opponents.isAlive()) {
+                graveyardList.add(opponentsParty.getMembers().get(indexOpponent));
+                //opponentsParty = removeDeadCharacterFromParty(opponentsParty, indexOpponent);
+                opponentsParty.getMembers().remove(indexOpponent);
+                System.out.println("You have won this fight!");
+            }
+            round++;
+        }
+
+    }
+}
 
 
 
