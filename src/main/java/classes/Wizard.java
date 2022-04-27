@@ -29,16 +29,20 @@ public class Wizard extends Character{
     public void setIntelligence(int intelligence) {
         if(intelligence >= 1 && intelligence <= 50){
             this.intelligence = intelligence;
+        } else if(intelligence < 1) {
+            this.intelligence = 1;
         } else {
-            System.out.println("Wizard's intelligence needs to be in between 1 and 50 both inclusive, insert other number.");
+            this.intelligence = 50;
         }
     }
 
     public void setMana(int mana) {
         if(mana >= 10 && mana <= 50){
             this.mana = mana;
+        } else if(mana < 10){
+            this.mana = 10;
         } else {
-            System.out.println("Wizard's mana needs to be in between 10 and 50 both inclusive, insert other number.");
+            this.mana = 50;
         }
     }
 
@@ -46,8 +50,10 @@ public class Wizard extends Character{
     public void setHp(int hp){
         if(hp >= 50 || hp <= 100){
             super.setHp(hp);
+        } else if (hp < 50){
+            super.setHp(50);
         } else {
-            System.out.println("Wizard's hp needs to be in between 50 and 100 both inclusive, insert other number.");
+            super.setHp(100);
         }
     }
 

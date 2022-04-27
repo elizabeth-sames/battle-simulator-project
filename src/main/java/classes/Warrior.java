@@ -27,16 +27,20 @@ public class Warrior extends Character {
     public void setStrength(int strength) {
         if(strength >= 1 && strength <= 10){
             this.strength = strength;
+        } else  if (strength < 1){
+            this.strength = 1;
         } else {
-            System.out.println("Warrior's strength needs to be in between 1 and 10 both inclusive, insert other number.");
+            this.strength = 10;
         }
     }
 
     public void setStamina(int stamina) {
         if(stamina >= 10 && stamina <= 50){
             this.stamina = stamina;
+        } else if(stamina < 10){
+            this.strength = 10;
         } else {
-            System.out.println("Warrior's stamina needs to be in between 10 and 50 both inclusive, insert other number.");
+            this.strength = 50;
         }
     }
 
@@ -44,8 +48,10 @@ public class Warrior extends Character {
     public void setHp(int hp){
         if(hp >= 100 && hp <= 200){
             super.setHp(hp);
+        } else if(hp < 100){
+            super.setHp(100);
         } else {
-            System.out.println("Warrior's hp needs to be in between 100 and 200 both inclusive, insert other number.");
+            super.setHp(200);
         }
     }
 
