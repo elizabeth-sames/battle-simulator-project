@@ -30,7 +30,8 @@ public class Main {
 
         //get player info
         System.out.println("Welcome to the Battle!");
-        writer.write("Welcome to the Battle!\n\n\n");
+        writer.write("     Welcome to the Battle!");
+        writer.write("    ------------------------\n\n\n");
         System.out.println("Please enter your name: ");
         String playerName = scanner.nextLine();
         System.out.println("Welcome to the battle, " + playerName + "! Time to build your battle party." +
@@ -96,7 +97,7 @@ public class Main {
                     + opponentsParty.getMembers().get(indexOpponent).toString());
             writer.write("Your opponent has chosen: "
                     + opponentsParty.getMembers().get(indexOpponent).toString() +"\n");
-            writer.write("===========================================================================\n");
+            writer.write("===========================================================================\n\n");
             //fight
             battle.twoPlayersFight(indexPlayer, indexOpponent);
             System.out.println("Graveyard: " + battle.getGraveyardList().toString());
@@ -111,8 +112,21 @@ public class Main {
                     " / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  \n" +
                     "/_/\\____/\\____/     |__/|__/\\____/_/ |_/  (_)   \n" +
                     "                                              ");
+            writer.write("__  ______  __  __   _       ______  _   __   __\n" +
+                    "\\ \\/ / __ \\/ / / /  | |     / / __ \\/ | / /  / /\n" +
+                    " \\  / / / / / / /   | | /| / / / / /  |/ /  / / \n" +
+                    " / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  \n" +
+                    "/_/\\____/\\____/     |__/|__/\\____/_/ |_/  (_)   \n" +
+                    "                                              ");
         }else{
             System.out.println("__  ______  __  __   __    ____  ___________\n" +
+                    "\\ \\/ / __ \\/ / / /  / /   / __ \\/ ___/_  __/\n" +
+                    " \\  / / / / / / /  / /   / / / /\\__ \\ / /   \n" +
+                    " / / /_/ / /_/ /  / /___/ /_/ /___/ // /    \n" +
+                    "/_/\\____/\\____/  /_____/\\____//____//_/     \n" +
+                    "                                      ");
+
+            writer.write("__  ______  __  __   __    ____  ___________\n" +
                     "\\ \\/ / __ \\/ / / /  / /   / __ \\/ ___/_  __/\n" +
                     " \\  / / / / / / /  / /   / / / /\\__ \\ / /   \n" +
                     " / / /_/ / /_/ /  / /___/ /_/ /___/ // /    \n" +
