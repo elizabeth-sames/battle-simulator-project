@@ -30,8 +30,8 @@ public class Main {
 
         //get player info
         System.out.println("Welcome to the Battle!");
-        writer.write("     Welcome to the Battle!");
-        writer.write("    ------------------------\n\n\n");
+        writer.write("                      Welcome to the Battle!\n");
+        writer.write("    ---------------------------------------------------------------\n\n\n");
         System.out.println("Please enter your name: ");
         String playerName = scanner.nextLine();
         System.out.println("Welcome to the battle, " + playerName + "! Time to build your battle party." +

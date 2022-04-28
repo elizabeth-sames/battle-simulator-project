@@ -69,7 +69,7 @@ public class Battle {
                             opponents.attackMessage().concat("\n"));
 
             if (!players.isAlive()) {
-                graveyardList.add(((Character) opponentsParty.getMembers().get(indexOpponent)).getName());
+                graveyardList.add(((Character) playersParty.getMembers().get(indexPlayer)).getName());
                 playersParty.getMembers().remove(indexPlayer);
                 System.out.println("Your opponent has won this fight");
                 System.out.println("Graveyard: " + graveyardList.toString() + "\n");
