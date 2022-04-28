@@ -48,11 +48,19 @@ public class Warrior extends Character {
 
     @Override
     public void setHp(int hp){
+        if(hp >= 100 && hp <= 200){
+            super.setHp(hp);
+        } else if (hp<100){
+            super.setHp(100);
+        } else {
+            super.setHp(200);
+        }
+    }
+
+    public void applyDamageFromAttack(int hp){
         if(hp <=0){
             super.setHp(0);
             super.setAlive(false);
-        } else if(hp >= 100 && hp <= 200){
-            super.setHp(hp);
         } else {
             super.setHp(hp);
         }
@@ -91,4 +99,11 @@ public class Warrior extends Character {
         }
     }
 
+    public String attackMessage() {
+        if (this.getHp() > 5) {
+            return this.getName() + " launched a Heavy Attack";
+        } else {
+            return "Weak Attack by " + this.getName();
+        }
+    }
 }
