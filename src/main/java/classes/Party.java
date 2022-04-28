@@ -62,8 +62,6 @@ public class Party {
 
 
     public void makeCustomParty(Scanner scanner2) {
-        //Scanner scanner2= new Scanner(System.in);
-
         while(this.members.size()<4) {
             System.out.println(
                     "Please, choose a new member for your party" +
@@ -83,26 +81,60 @@ public class Party {
             System.out.println(name + " is a new " + character + " of your party");
 
             //make a warrior
+            String input = "";
+            boolean flag;
             if (character.equals("warrior")) {
+                System.out.println("");
+
                 System.out.println("Now choose a number between 100-200 representing the health points");
-                int hp = scanner2.nextInt();
-                    if ((int) hp < 100 || hp > 200) {
+                do {
+                    input = scanner2.next();
+                    try {
+                        Integer.parseInt(input);
+                        flag = false;
+                    } catch (NumberFormatException e) {
                         System.err.println("Choose 100-200");
-                        hp = scanner2.nextInt();
+                        flag = true;
                     }
-                System.out.println(name + " has " + hp + " of health points");
+                } while (flag);
+                int hp = Integer.parseInt(input);
+                while (hp < 100 || hp > 200) {
+                    System.err.println("Choose 100-200");
+                    hp = scanner2.nextInt();
+                }
+                //System.out.println(name + " has " + hp + " of health points");
 
                 System.out.println(("Choose stamina between 10 and 50"));
-                int stamina = scanner2.nextInt();
+                do {
+                    input = scanner2.next();
+                    try {
+                        Integer.parseInt(input);
+                        flag = false;
+                    } catch (NumberFormatException e) {
+                        System.err.println("Choose 10-50");
+                        flag = true;
+                    }
+                } while (flag);
+                int stamina = Integer.parseInt(input);
 
                 while (stamina < 10 || stamina > 50) {
                     System.err.println("Choose 10-50");
                     stamina = scanner2.nextInt();
                 }
-                System.out.println(name + " has " + stamina + " of stamina");
+                //System.out.println(name + " has " + stamina + " of stamina");
 
                 System.out.println((name + " needs an strength between 1 and 10"));
-                int strength = scanner2.nextInt();
+                do {
+                    input = scanner2.next();
+                    try {
+                        Integer.parseInt(input);
+                        flag = false;
+                    } catch (NumberFormatException e) {
+                        System.err.println("Choose 1-10");
+                        flag = true;
+                    }
+                } while (flag);
+                int strength = Integer.parseInt(input);
 
                 while (strength < 1 || strength > 10) {
                     System.err.println("Choose 1-10");
@@ -115,24 +147,55 @@ public class Party {
             } else {
                 //make a wizard
                 System.out.println("Now choose a number between 50-100 representing the health points");
-                int hp = scanner2.nextInt();
+                do {
+                    input = scanner2.next();
+                    try {
+                        Integer.parseInt(input);
+                        flag = false;
+                    } catch (NumberFormatException e) {
+                        System.err.println("Choose 50-100");
+                        flag = true;
+                    }
+                } while (flag);
+                int hp = Integer.parseInt(input);
 
                 while (hp < 50 || hp > 100) {
                     System.err.println("Choose 50-100");
                     hp = scanner2.nextInt();
                 }
-                System.out.println(name + " has " + hp + "of health points");
+                //System.out.println(name + " has " + hp + "of health points");
 
                 System.out.println((name + " needs mana between 10 and 50"));
-                int mana = scanner2.nextInt();
+                do {
+                    input = scanner2.next();
+                    try {
+                        Integer.parseInt(input);
+                        flag = false;
+                    } catch (NumberFormatException e) {
+                        System.err.println("Choose 10-50");
+                        flag = true;
+                    }
+                } while (flag);
+                int mana = Integer.parseInt(input);
+
                 while (mana < 10 || mana > 50) {
-                    System.err.println("Choose a number between 10 and 50");
+                    System.err.println("Choose 10-50");
                     mana = scanner2.nextInt();
                 }
-                System.out.println(name + " has an health point of " + mana);
+                //System.out.println(name + " has an health point of " + mana);
 
                 System.out.println("Please, choose intelligence for " + name + " a number between 1 and 50");
-                int intelligence = scanner2.nextInt();
+                do {
+                    input = scanner2.next();
+                    try {
+                        Integer.parseInt(input);
+                        flag = false;
+                    } catch (NumberFormatException e) {
+                        System.err.println("Choose 1-50");
+                        flag = true;
+                    }
+                } while (flag);
+                int intelligence = Integer.parseInt(input);
                 while (intelligence < 1 || intelligence > 50) {
                     System.err.println("Choose a number between 1 and 50");
                     intelligence = scanner2.nextInt();
@@ -180,7 +243,6 @@ public class Party {
                     this.members.add(newWizard);
                 }
             }
-            //scanner.close();
         }
     }
 

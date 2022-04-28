@@ -49,10 +49,7 @@ public class Wizard extends Character{
 
     @Override
     public void setHp(int hp){
-        if(hp <=0){
-            super.setHp(0);
-            super.setAlive(false);
-        } else if(hp >= 50 || hp <= 100){
+        if(hp >= 50 || hp <= 100){
             super.setHp(hp);
         } else if (hp < 50){
             super.setHp(50);
@@ -60,6 +57,17 @@ public class Wizard extends Character{
             super.setHp(100);
         }
     }
+
+    public void applyDamageFromAttack(int hp){
+        if(hp <=0){
+            super.setHp(0);
+            super.setAlive(false);
+        } else {
+            super.setHp(hp);
+        }
+    }
+
+
 
     @Override
     public String toString() {
@@ -89,6 +97,14 @@ public class Wizard extends Character{
             //Staff hit
             this.mana = this.mana + 1;
             return 2;
+        }
+    }
+
+    public String attackMessage() {
+        if (this.getHp() > 5) {
+            return this.getName() + " threw a Fireball";
+        } else {
+            return "Staff hit by " + this.getName();
         }
     }
 }

@@ -66,7 +66,7 @@ public class Main {
                 playersParty.makeCsvParty1();
                 break;
         }
-        //scanner.close();
+
         System.out.println("Your party is ready for battle!");
         //create opponent team
         Party opponentsParty = new Party();
@@ -100,9 +100,7 @@ public class Main {
             writer.write("===========================================================================\n\n");
             //fight
             battle.twoPlayersFight(indexPlayer, indexOpponent);
-            System.out.println("Graveyard: " + battle.getGraveyardList().toString());
-            writer.write("Graveyard: " + battle.getGraveyardList().toString() +"\n");
-
+            
         }
         //add winner statement here
         if (opponentsParty.getSize() == 0 ){
