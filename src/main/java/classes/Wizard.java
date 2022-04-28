@@ -18,6 +18,10 @@ public class Wizard extends Character{
         setMana(mana);
     }
 
+    public String getCharacterType() {
+        return characterType;
+    }
+
     public Wizard() {
     }
 

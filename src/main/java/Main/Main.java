@@ -5,13 +5,14 @@ import classes.Party;
 import classes.Warrior;
 import classes.Wizard;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         Scanner scanner= new Scanner(System.in);
 
         //get player info
@@ -43,12 +44,13 @@ public class Main {
                 playersParty.makeRandomParty();
                 break;
             case "c":
-                //method to make a customized party;
+                playersParty.makeCustomParty(scanner);
                 break;
             case "u":
-                //method to upload a party from CSV
+                playersParty.makeCsvParty1();
                 break;
         }
+        //scanner.close();
         System.out.println("Your party is ready for battle!");
 
         //create opponent team
@@ -57,12 +59,14 @@ public class Main {
 
         //start battle
         Battle battle = new Battle(playersParty, opponentsParty);
+        //Scanner scanner3 = new Scanner(System.in);
         while (playersParty.getSize() > 0 && opponentsParty.getSize() > 0) {
             //player chooses fighter
             System.out.println("Choose your fighter:");
             for (int i=0; i<playersParty.getSize(); i++) {
                 System.out.println("Enter " + (i+1) + " for " + playersParty.getMembers().get(i).toString());
             }
+
             int indexPlayer = scanner.nextInt() - 1;
             while (indexPlayer > playersParty.getSize()-1) {
                 System.out.println("Please enter a number between 1 and " + playersParty.getSize());
@@ -77,8 +81,9 @@ public class Main {
             battle.twoPlayersFight(indexPlayer, indexOpponent);
             System.out.println("Graveyard: " + battle.getGraveyardList().toString());
 
-
         }
+        //add winner statement here
+
 
         scanner.close();
 
