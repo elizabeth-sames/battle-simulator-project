@@ -21,6 +21,9 @@ public class Warrior extends Character {
     public Warrior() {
     }
 
+    public String getCharacterType() {
+        return characterType;
+    }
 
     //SETTERS
     public void setStrength(int strength) {

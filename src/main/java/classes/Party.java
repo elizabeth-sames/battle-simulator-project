@@ -1,9 +1,8 @@
 package classes;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.*;
 
 public class Party {
     private List<Object> members;
@@ -61,8 +60,10 @@ public class Party {
         };
     };
 
+
     public void makeCustomParty(Scanner scanner) {
         //Scanner scanner2= new Scanner(System.in);
+
         while(this.members.size()<4) {
             System.out.println(
                     "Please, choose a new member for your party" +
@@ -72,7 +73,9 @@ public class Party {
             while (!character.equals("wizard") && !character.equals("warrior")) {
                 System.err.println("This character does not exist.");
                 System.err.println("Please, choose between warrior and wizard");
+
                 character = scanner.next().toLowerCase();
+
             }
             System.out.println("You have chosen " + character);
             System.out.println("Please, choose a name for your " + character);
@@ -144,14 +147,16 @@ public class Party {
         //scanner2.close();
     }
 
-    public void makeCsvParty1(){
+    public void makeCsvParty1() throws FileNotFoundException {
         List<String> usedNames = new ArrayList<>();
         while(this.members.size() < 4){
-            Scanner scanner = new Scanner("party1.csv");
+            File file = new File("party1.csv");
+            //Scanner scanner = new Scanner("party1.csv");
+            Scanner scanner = new Scanner(file);
             while(scanner.hasNextLine()) {
                 String data = scanner.nextLine();
                 String[] dataArray = data.split(",");
-                if(dataArray[0] == "Warrior") {
+                if(dataArray[0].equals("Warrior")) {
                     Warrior newWarrior = new Warrior();
                     newWarrior.setName(dataArray[2]);
                     if(usedNames.contains(newWarrior.getName())){

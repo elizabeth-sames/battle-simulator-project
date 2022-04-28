@@ -11,6 +11,8 @@ public abstract class Character implements Attacker {
     private boolean isAlive;
     private static int totalCharacterCount = 0;
 
+    private  String characterType;
+
 
 
 
@@ -23,6 +25,10 @@ public abstract class Character implements Attacker {
         this.hp = hp;
         this.isAlive = true;
 
+    }
+
+    public String getCharacterType() {
+        return characterType;
     }
 
     public Character() {

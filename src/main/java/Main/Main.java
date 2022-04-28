@@ -6,16 +6,22 @@ import classes.Party;
 import classes.Warrior;
 import classes.Wizard;
 
+
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
+
+import java.io.FileNotFoundException;
+
 import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.random.RandomGenerator;
 
 public class Main {
+
     public static void main(String[] args) throws IOException {
+
         Scanner scanner= new Scanner(System.in);
 
 
@@ -56,9 +62,10 @@ public class Main {
                 playersParty.makeCustomParty(scanner);
                 break;
             case "u":
-                //method to upload a party from CSV
+                playersParty.makeCsvParty1();
                 break;
         }
+        //scanner.close();
         System.out.println("Your party is ready for battle!");
         //create opponent team
         Party opponentsParty = new Party();
@@ -75,6 +82,7 @@ public class Main {
                 System.out.println("Enter " + (i+1) + " for " + playersParty.getMembers().get(i).toString());
                 writer.write( playersParty.getMembers().get(i).toString() +"\n");
             }
+
             int indexPlayer = scanner.nextInt() - 1;
             while (indexPlayer > playersParty.getSize()-1) {
                 System.out.println("Please enter a number between 1 and " + playersParty.getSize());
@@ -94,8 +102,24 @@ public class Main {
             System.out.println("Graveyard: " + battle.getGraveyardList().toString());
             writer.write("Graveyard: " + battle.getGraveyardList().toString() +"\n");
 
-
         }
+        //add winner statement here
+        if (opponentsParty.getSize() == 0 ){
+            System.out.println("__  ______  __  __   _       ______  _   __   __\n" +
+                    "\\ \\/ / __ \\/ / / /  | |     / / __ \\/ | / /  / /\n" +
+                    " \\  / / / / / / /   | | /| / / / / /  |/ /  / / \n" +
+                    " / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  \n" +
+                    "/_/\\____/\\____/     |__/|__/\\____/_/ |_/  (_)   \n" +
+                    "                                              ");
+        }else{
+            System.out.println("__  ______  __  __   __    ____  ___________\n" +
+                    "\\ \\/ / __ \\/ / / /  / /   / __ \\/ ___/_  __/\n" +
+                    " \\  / / / / / / /  / /   / / / /\\__ \\ / /   \n" +
+                    " / / /_/ / /_/ /  / /___/ /_/ /___/ // /    \n" +
+                    "/_/\\____/\\____/  /_____/\\____//____//_/     \n" +
+                    "                                      ");
+        }
+
         writer.close();
         scanner.close();
 

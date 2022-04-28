@@ -50,38 +50,72 @@ public class Battle {
         return graveyardList;
     }
 
-    public void twoPlayersFight(int indexPlayer, int indexOpponent){
+    public void twoPlayersFight(int indexPlayer, int indexOpponent) {
         Character players = (Character) playersParty.getMembers().get(indexPlayer);
         Character opponents = (Character) opponentsParty.getMembers().get(indexOpponent);
 
-        int round =1;
+        int round = 1;
         while (players.isAlive() && opponents.isAlive()) {
             int damageCausedByPlayer = players.attack();
             int damageCausedByOpponent = opponents.attack();
 
+            String attackTypePlayer = "";
+            if (players.getCharacterType() == "Warrior") {
+                if (players.getHp() > 5) {
+                    attackTypePlayer = "Heavy Attack";
+                } else {
+                    attackTypePlayer = "Weak Attack";
+                }
+            } else {
+                if (players.getHp() > 5) {
+                    attackTypePlayer = "Fireball";
+                } else {
+                    attackTypePlayer = "Staff hit";
+                }
+            }
+
+            String attackTypeOpponent = "";
+            if (opponents.getCharacterType() == "Warrior") {
+                if (players.getHp() > 5) {
+                    attackTypeOpponent = "Heavy Attack";
+                } else {
+                    attackTypeOpponent = "Weak Attack";
+                }
+            } else {
+                if (players.getHp() > 5) {
+                    attackTypeOpponent = "Fireball";
+                } else {
+                    attackTypeOpponent = "Staff hit";
+                }
+            }
+
             players.setHp(players.getHp() - damageCausedByOpponent);
             opponents.setHp(opponents.getHp() - damageCausedByPlayer);
-            System.out.println("Round " + round + ":   \n" +
-                     players.toString() + "\n" +
-                     opponents.toString());
+            System.out.println("\nRound " + round + ":   \n" +
+                    players.getName() + " has done a " + attackTypePlayer + "\n" +
+                    opponents.getName() + " has done a " + attackTypeOpponent);
 
             if (!players.isAlive()) {
-                graveyardList.add(playersParty.getMembers().get(indexPlayer));
+                graveyardList.add(((Character) playersParty.getMembers().get(indexPlayer)).getName());
                 //playersParty = removeDeadCharacterFromParty(playersParty, indexPlayer);
                 playersParty.getMembers().remove(indexPlayer);
-                System.out.println("Your opponent has won this fight");
+                System.out.println("\nYour opponent has won this fight");
+                System.out.println("Graveyard: " + graveyardList.toString() + "\n");
             }
             if (!opponents.isAlive()) {
-                graveyardList.add(opponentsParty.getMembers().get(indexOpponent));
+                graveyardList.add(((Character) opponentsParty.getMembers().get(indexOpponent)).getName());
                 //opponentsParty = removeDeadCharacterFromParty(opponentsParty, indexOpponent);
                 opponentsParty.getMembers().remove(indexOpponent);
-                System.out.println("You have won this fight!");
+                System.out.println("\nYou have won this fight!");
+                System.out.println("Graveyard: " + graveyardList.toString() + "\n");
             }
             round++;
         }
 
     }
+
 }
+
 
 
 
