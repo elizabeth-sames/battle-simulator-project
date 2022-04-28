@@ -1,149 +1,62 @@
-    Welcome to the Battle!
-
-
-    ______________________
-
-
-Your battle party had those members:  
-Morgan (Wizard)  hp: 60  mana: 36  intelligence:14
-Evander (Warrior)  hp: 143  stamina: 28  strength:8
-Circe (Wizard)  hp: 52  mana: 39  intelligence:32
-Imelda (Warrior)  hp: 133  stamina: 42  strength:3
-You have chosen: Morgan (Wizard)  hp: 60  mana: 36  intelligence:14
-Your opponent has chosen: Minerva (Wizard)  hp: 97  mana: 41  intelligence:32
-===========================================================================
-Graveyard: [Morgan]
-Your battle party had those members:  
-Evander (Warrior)  hp: 143  stamina: 28  strength:8
-Circe (Wizard)  hp: 52  mana: 39  intelligence:32
-Imelda (Warrior)  hp: 133  stamina: 42  strength:3
-You have chosen: Circe (Wizard)  hp: 52  mana: 39  intelligence:32
-Your opponent has chosen: Magda (Warrior)  hp: 199  stamina: 34  strength:9
-===========================================================================
-Graveyard: [Morgan, Circe]
-Your battle party had those members:  
-Evander (Warrior)  hp: 143  stamina: 28  strength:8
-Imelda (Warrior)  hp: 133  stamina: 42  strength:3
-You have chosen: Imelda (Warrior)  hp: 133  stamina: 42  strength:3
-Your opponent has chosen: Minerva (Wizard)  hp: 69  mana: 31  intelligence:32
-===========================================================================
-Graveyard: [Morgan, Circe, Imelda]
-Your battle party had those members:  
-Evander (Warrior)  hp: 143  stamina: 28  strength:8
-You have chosen: Evander (Warrior)  hp: 143  stamina: 28  strength:8
-Your opponent has chosen: Ren (Wizard)  hp: 67  mana: 30  intelligence:17
-===========================================================================
-Graveyard: [Morgan, Circe, Imelda, Ren]
-Your battle party had those members:  
-Evander (Warrior)  hp: 31  stamina: 3  strength:8
-You have chosen: Evander (Warrior)  hp: 31  stamina: 3  strength:8
-Your opponent has chosen: Gunner (Warrior)  hp: 125  stamina: 17  strength:2
-===========================================================================
-Graveyard: [Morgan, Circe, Imelda, Ren, Evander]
-     Welcome to the Battle!
-    ------------------------
+                      Welcome to the Battle!
+    -----------------------------------------------------------------
 
 
 Your battle party had those members:  
-Ulfred (Wizard)  hp: 60  mana: 33  intelligence:12
-Lucien (Wizard)  hp: 90  mana: 43  intelligence:26
-Ren (Wizard)  hp: 58  mana: 27  intelligence:26
-Marco (Warrior)  hp: 186  stamina: 49  strength:5
-You have chosen: Ulfred (Wizard)  hp: 60  mana: 33  intelligence:12
-Your opponent has chosen: Bertram (Wizard)  hp: 83  mana: 42  intelligence:28
-===========================================================================
-Graveyard: [Ulfred]
-Your battle party had those members:  
-Lucien (Wizard)  hp: 90  mana: 43  intelligence:26
-Ren (Wizard)  hp: 58  mana: 27  intelligence:26
-Marco (Warrior)  hp: 186  stamina: 49  strength:5
-You have chosen: Lucien (Wizard)  hp: 90  mana: 43  intelligence:26
-Your opponent has chosen: Glinda (Wizard)  hp: 89  mana: 46  intelligence:39
-===========================================================================
-Graveyard: [Ulfred, Lucien]
-Your battle party had those members:  
-Ren (Wizard)  hp: 58  mana: 27  intelligence:26
-Marco (Warrior)  hp: 186  stamina: 49  strength:5
-You have chosen: Ren (Wizard)  hp: 58  mana: 27  intelligence:26
-Your opponent has chosen: Glinda (Wizard)  hp: 11  mana: 31  intelligence:39
-===========================================================================
-Graveyard: [Ulfred, Lucien, Glinda]
-Your battle party had those members:  
-Ren (Wizard)  hp: 19  mana: 22  intelligence:26
-Marco (Warrior)  hp: 186  stamina: 49  strength:5
-You have chosen: Ren (Wizard)  hp: 19  mana: 22  intelligence:26
-Your opponent has chosen: Bertram (Wizard)  hp: 47  mana: 27  intelligence:28
-===========================================================================
-Graveyard: [Ulfred, Lucien, Glinda, Ren]
-Your battle party had those members:  
-Marco (Warrior)  hp: 186  stamina: 49  strength:5
-You have chosen: Marco (Warrior)  hp: 186  stamina: 49  strength:5
-Your opponent has chosen: Bertram (Wizard)  hp: 21  mana: 22  intelligence:28
-===========================================================================
-Graveyard: [Ulfred, Lucien, Glinda, Ren, Bertram]
-Your battle party had those members:  
-Marco (Warrior)  hp: 72  stamina: 24  strength:5
-You have chosen: Marco (Warrior)  hp: 72  stamina: 24  strength:5
-Your opponent has chosen: Merlin (Wizard)  hp: 91  mana: 12  intelligence:30
-===========================================================================
-Graveyard: [Ulfred, Lucien, Glinda, Ren, Bertram, Marco]
-     Welcome to the Battle!
-    ------------------------
-
-
-Your battle party had those members:  
-Glinda (Wizard)  hp: 89  mana: 42  intelligence:27
-Lazar (Wizard)  hp: 73  mana: 25  intelligence:32
-Gert (Warrior)  hp: 189  stamina: 27  strength:7
-Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-You have chosen: Glinda (Wizard)  hp: 89  mana: 42  intelligence:27
-Your opponent has chosen: Sena (Warrior)  hp: 194  stamina: 19  strength:10
+Osiris (Wizard)  hp: 98  mana: 25  intelligence:4
+Ren (Wizard)  hp: 99  mana: 13  intelligence:28
+Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Osiris (Wizard)  hp: 98  mana: 25  intelligence:4
+Your opponent has chosen: Olive (Wizard)  hp: 66  mana: 29  intelligence:7
 ===========================================================================
 
-Graveyard: [Sena]
 Your battle party had those members:  
-Glinda (Wizard)  hp: 29  mana: 2  intelligence:27
-Lazar (Wizard)  hp: 73  mana: 25  intelligence:32
-Gert (Warrior)  hp: 189  stamina: 27  strength:7
-Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-You have chosen: Glinda (Wizard)  hp: 29  mana: 2  intelligence:27
-Your opponent has chosen: Vesta (Wizard)  hp: 84  mana: 48  intelligence:27
+Osiris (Wizard)  hp: 8  mana: 2  intelligence:4
+Ren (Wizard)  hp: 99  mana: 13  intelligence:28
+Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Osiris (Wizard)  hp: 8  mana: 2  intelligence:4
+Your opponent has chosen: Elric (Wizard)  hp: 79  mana: 22  intelligence:2
 ===========================================================================
 
-Graveyard: [Sena, Glinda]
 Your battle party had those members:  
-Lazar (Wizard)  hp: 73  mana: 25  intelligence:32
-Gert (Warrior)  hp: 189  stamina: 27  strength:7
-Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-You have chosen: Lazar (Wizard)  hp: 73  mana: 25  intelligence:32
-Your opponent has chosen: Evander (Warrior)  hp: 129  stamina: 24  strength:2
+Ren (Wizard)  hp: 99  mana: 13  intelligence:28
+Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Ren (Wizard)  hp: 99  mana: 13  intelligence:28
+Your opponent has chosen: Lazar (Wizard)  hp: 63  mana: 26  intelligence:3
 ===========================================================================
 
-Graveyard: [Sena, Glinda, Evander]
 Your battle party had those members:  
-Lazar (Wizard)  hp: 64  mana: 6  intelligence:32
-Gert (Warrior)  hp: 189  stamina: 27  strength:7
-Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-You have chosen: Lazar (Wizard)  hp: 64  mana: 6  intelligence:32
-Your opponent has chosen: Otto (Warrior)  hp: 131  stamina: 35  strength:10
+Ren (Wizard)  hp: 82  mana: 1  intelligence:28
+Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Ren (Wizard)  hp: 82  mana: 1  intelligence:28
+Your opponent has chosen: Elric (Wizard)  hp: 71  mana: 2  intelligence:2
 ===========================================================================
 
-Graveyard: [Sena, Glinda, Evander, Lazar]
 Your battle party had those members:  
-Gert (Warrior)  hp: 189  stamina: 27  strength:7
-Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-You have chosen: Gert (Warrior)  hp: 189  stamina: 27  strength:7
-Your opponent has chosen: Vesta (Wizard)  hp: 80  mana: 38  intelligence:27
+Ren (Wizard)  hp: 58  mana: 1  intelligence:28
+Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Ren (Wizard)  hp: 58  mana: 1  intelligence:28
+Your opponent has chosen: Igor (Warrior)  hp: 169  stamina: 39  strength:8
 ===========================================================================
 
-Graveyard: [Sena, Glinda, Evander, Lazar, Gert]
 Your battle party had those members:  
-Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-You have chosen: Elric (Wizard)  hp: 75  mana: 12  intelligence:4
-Your opponent has chosen: Vesta (Wizard)  hp: 39  mana: 3  intelligence:27
+Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Igor (Warrior)  hp: 123  stamina: 15  strength:1
+Your opponent has chosen: Igor (Warrior)  hp: 127  stamina: 5  strength:8
 ===========================================================================
 
-Graveyard: [Sena, Glinda, Evander, Lazar, Gert, Elric]
+Your battle party had those members:  
+Marco (Warrior)  hp: 114  stamina: 43  strength:2
+You have chosen: Marco (Warrior)  hp: 114  stamina: 43  strength:2
+Your opponent has chosen: Igor (Warrior)  hp: 121  stamina: 1  strength:8
+===========================================================================
+
 __  ______  __  __   __    ____  ___________
 \ \/ / __ \/ / / /  / /   / __ \/ ___/_  __/
  \  / / / / / / /  / /   / / / /\__ \ / /   
