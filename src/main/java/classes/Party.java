@@ -60,6 +60,7 @@ public class Party {
         };
     };
 
+
     public void makeCustomParty(Scanner scanner2) {
         while(this.members.size()<4) {
             System.out.println(
@@ -70,7 +71,9 @@ public class Party {
             while (!character.equals("wizard") && !character.equals("warrior")) {
                 System.err.println("This character does not exist.");
                 System.err.println("Please, choose between warrior and wizard");
+
                 character = scanner2.next().toLowerCase();
+
             }
             System.out.println("You have chosen " + character);
             System.out.println("Please, choose a name for your " + character);
@@ -240,7 +243,6 @@ public class Party {
                     this.members.add(newWizard);
                 }
             }
-            scanner.close();
         }
     }
 

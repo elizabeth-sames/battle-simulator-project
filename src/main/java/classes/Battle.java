@@ -53,11 +53,11 @@ public class Battle {
     }
 
 
-    public void twoPlayersFight(int indexPlayer, int indexOpponent){
+    public void twoPlayersFight(int indexPlayer, int indexOpponent) {
         Character players = (Character) playersParty.getMembers().get(indexPlayer);
         Character opponents = (Character) opponentsParty.getMembers().get(indexOpponent);
 
-        int round =1;
+        int round = 1;
         while (players.isAlive() && opponents.isAlive()) {
             int damageCausedByPlayer = players.attack();
             int damageCausedByOpponent = opponents.attack();
@@ -86,6 +86,7 @@ public class Battle {
     }
 
 }
+
 
 
 
