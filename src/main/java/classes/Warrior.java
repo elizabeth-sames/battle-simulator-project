@@ -82,6 +82,7 @@ public class Warrior extends Character {
         return characterType;
     }
 
+    //METHODS
     public void makeRandom() {
         super.setHp((int) Math.floor(Math.random()*101 + 100));
         this.stamina = (int) Math.floor(Math.random()*41 + 10);

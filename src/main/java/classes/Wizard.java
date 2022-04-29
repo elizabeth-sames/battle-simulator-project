@@ -124,6 +124,4 @@ public class Wizard extends Character{
                 + "  intelligence:" + intelligence;
     }
 
-
-
 }

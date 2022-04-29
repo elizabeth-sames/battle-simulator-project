@@ -1,3 +1,4 @@
+
      Welcome to the Battle!
     ------------------------
 
@@ -110,6 +111,7 @@ Imelda (Warrior)  hp: 189  stamina: 49  strength:1
 You have chosen: Imelda (Warrior)  hp: 189  stamina: 49  strength:1
 Your opponent has chosen: Luther (Warrior)  hp: 38  stamina: 6  strength:10
 
+
 Round 1:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
 Round 2:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
 Round 3:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
@@ -149,6 +151,7 @@ Graveyard: [Fredo, Minerva, Vesta, Walter, Imelda]
 ===========================================================================
 
 All of your fighters have died.
+
 
 __  ______  __  __   __    ____  ___________
 \ \/ / __ \/ / / /  / /   / __ \/ ___/_  __/

@@ -69,6 +69,7 @@ public abstract class Character implements Attacker {
         return characterType;
     }
 
+    //METHODS
     public void changeNameIfDuplicate(List<String> usedNames) {
         if (usedNames.contains(this.name.toLowerCase())) {
             this.name = this.name + " Jr";

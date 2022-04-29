@@ -83,9 +83,6 @@ public class Party {
                 if(dataArray[0].equals("Warrior")) {
                     Warrior newWarrior = new Warrior();
                     newWarrior.setName(dataArray[2]);
-//                    if(usedNames.contains(newWarrior.getName())){
-//                        newWarrior.setName(newWarrior.getName() + "Jr");
-//                    }
                     newWarrior.changeNameIfDuplicate(usedNames);
                     usedNames.add(newWarrior.getName());
                     newWarrior.setHp(Integer.parseInt(dataArray[3]));
@@ -95,9 +92,6 @@ public class Party {
                 } else {
                     Wizard newWizard = new Wizard();
                     newWizard.setName(dataArray[2]);
-//                    if(usedNames.contains(newWizard.getName())){
-//                        newWizard.setName(newWizard.getName() + "Jr");
-//                    }
                     newWizard.changeNameIfDuplicate(usedNames);
                     usedNames.add(newWizard.getName());
                     newWizard.setHp(Integer.parseInt(dataArray[3]));
