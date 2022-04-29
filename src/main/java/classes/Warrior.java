@@ -126,17 +126,6 @@ public class Warrior extends Character {
         }
     }
 
-//    public String warriorData() {
-//        String data = this.characterType + ", " + super.getName()+ ", " + super.getHp() + ", " + this.stamina + ", " + this.strength + "\n";
-//        return data;
-//    }
-
-//    public String warriorData() {
-//        return "characterType=Warrior,name=" + super.getName() + ",hp=" + super.getHp() +
-//                ",stamina=" + stamina +
-//                ",strength=" + strength +
-//                '\'';
-//    }
     public String warriorData() {
         return "Warrior," + super.getName() + "," + super.getHp() +
                 "," + stamina +

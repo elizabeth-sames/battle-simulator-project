@@ -132,7 +132,7 @@ public class Party {
             System.out.println("Enter " + (i+1) + " for " + members.get(i).toString());
             writer.write( members.get(i).toString() + "\n");
         }
-        int index = Utility.verifyIntInput(scanner, 1, members.size()) - 1;
+        int index = Utility.verifyIntInput(scanner, 0, members.size()) - 1;
         System.out.println("You have chosen: " + members.get(index).toString());
         writer.write("\nYou have chosen: " + members.get(index).toString() +"\n");
         return index;

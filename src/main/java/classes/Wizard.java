@@ -124,17 +124,6 @@ public class Wizard extends Character{
                 + "  intelligence:" + intelligence;
     }
 
-//    public String wizardData() {
-//        String data = this.characterType + ", " + super.getName()+ ", " + super.getHp() + ", " + this.mana + ", " + this.intelligence;
-//        return data;
-//    };
-
-//    public String warriorData() {
-//        return "characterType=Warrior,name=" + super.getName() + ",hp=" + super.getHp() +
-//                ",mana=" + mana +
-//                ",intelligence=" + intelligence +
-//                '\'';
-//    }
 
     public String wizardData() {
         return "Wizard," + super.getName() + "," + super.getHp() +
