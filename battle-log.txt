@@ -661,3 +661,114 @@ __  ______  __  __   _       ______  _   __   __
  \  / / / / / / /   | | /| / / / / /  |/ /  / / 
  / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  
 /_/\____/\____/     |__/|__/\____/_/ |_/  (_)   
+ _      _____  / /________  ____ ___  ___      / /_____      / /_/ /_  ___      
+| | /| / / _ \/ / ___/ __ \/ __ `__ \/ _ \    / __/ __ \    / __/ __ \/ _ \     
+| |/ |/ /  __/ / /__/ /_/ / / / / / /  __/   / /_/ /_/ /   / /_/ / / /  __/     
+|__/|__/\___/_/\___/\____/_/ /_/ /_/\___/    \__/\____/    \__/_/ /_/\___/      
+        ________  ____  _   __     ____  ___  ______________    ______          
+       /  _/ __ \/ __ \/ | / /    / __ )/   |/_  __/_  __/ /   / ____/          
+       / // /_/ / / / /  |/ /    / __  / /| | / /   / / / /   / __/             
+     _/ // _, _/ /_/ / /|  /    / /_/ / ___ |/ /   / / / /___/ /___             
+    /___/_/ |_|\____/_/ |_/    /_____/_/  |_/_/   /_/ /_____/_____/             
+
+    ------------------------
+
+Express Battle
+
+Duel 1
+Merlin (Wizard)  hp: 66  mana: 24  intelligence:31   versus   Vesta (Wizard)  hp: 94  mana: 11  intelligence:24
+
+Round 1:   Ursula threw a Fireball.   Vesta threw a Fireball.
+Round 2:   Ursula threw a Fireball.   Vesta threw a Fireball.
+Round 3:   Ursula threw a Fireball.   Staff hit by Vesta.
+
+
+Vesta has died. You won this fight!
+Graveyard: [Vesta]
+===========================================================================
+Duel 2
+Agnes (Wizard)  hp: 55  mana: 43  intelligence:5   versus   Circe (Wizard)  hp: 97  mana: 17  intelligence:47
+
+Round 1:   Milo launched a Heavy Attack.   Circe threw a Fireball.
+Round 2:   Milo launched a Heavy Attack.   Circe threw a Fireball.
+Round 3:   Milo launched a Heavy Attack.   Circe threw a Fireball.
+Round 4:   Milo launched a Heavy Attack.   Circe threw a Fireball.
+Round 5:   Milo launched a Heavy Attack.   Circe threw a Fireball.
+Round 6:   Milo launched a Heavy Attack.   Circe threw a Fireball.
+Round 7:   Weak Attack by Milo.   Circe threw a Fireball.
+Round 8:   Weak Attack by Milo.   Circe threw a Fireball.
+Round 9:   Weak Attack by Milo.   Circe threw a Fireball.
+
+
+Milo has died. Your opponent won this fight.
+Graveyard: [Vesta, Milo]
+===========================================================================
+Duel 3
+Merlin (Wizard)  hp: 66  mana: 24  intelligence:31   versus   Bertha (Warrior)  hp: 105  stamina: 43  strength:3
+
+Round 1:   Ursula threw a Fireball.   Bertha launched a Heavy Attack.
+Round 2:   Ursula threw a Fireball.   Bertha launched a Heavy Attack.
+Round 3:   Ursula threw a Fireball.   Weak Attack by Bertha.
+
+
+Bertha has died. You won this fight!
+Graveyard: [Vesta, Milo, Bertha]
+===========================================================================
+Duel 4
+Ursula (Wizard)  hp: 21  mana: 15  intelligence:42   versus   Harold (Warrior)  hp: 140  stamina: 15  strength:9
+
+Round 1:   Merlin threw a Fireball.   Harold launched a Heavy Attack.
+Round 2:   Merlin threw a Fireball.   Harold launched a Heavy Attack.
+Round 3:   Merlin threw a Fireball.   Harold launched a Heavy Attack.
+Round 4:   Merlin threw a Fireball.   Harold launched a Heavy Attack.
+Round 5:   Merlin threw a Fireball.   Harold launched a Heavy Attack.
+Round 6:   Merlin threw a Fireball.   Weak Attack by Harold.
+
+
+Harold has died. You won this fight!
+Graveyard: [Vesta, Milo, Bertha, Harold]
+===========================================================================
+Duel 5
+Agnes (Wizard)  hp: 55  mana: 43  intelligence:5   versus   Circe (Wizard)  hp: 43  mana: 2  intelligence:47
+
+Round 1:   Merlin threw a Fireball.   Circe threw a Fireball.
+Round 2:   Merlin threw a Fireball.   Circe threw a Fireball.
+Round 3:   Merlin threw a Fireball.   Circe threw a Fireball.
+Round 4:   Staff hit by Merlin.   Circe threw a Fireball.
+
+
+Merlin has died. Your opponent won this fight.
+Graveyard: [Vesta, Milo, Bertha, Harold, Merlin]
+===========================================================================
+Duel 6
+Agnes (Wizard)  hp: 55  mana: 43  intelligence:5   versus   Circe (Wizard)  hp: 35  mana: 0  intelligence:47
+
+Round 1:   Agnes threw a Fireball.   Circe threw a Fireball.
+Round 2:   Agnes threw a Fireball.   Circe threw a Fireball.
+Round 3:   Agnes threw a Fireball.   Circe threw a Fireball.
+Round 4:   Agnes threw a Fireball.   Circe threw a Fireball.
+Round 5:   Agnes threw a Fireball.   Circe threw a Fireball.
+Round 6:   Staff hit by Agnes.   Circe threw a Fireball.
+
+
+Agnes has died. Your opponent won this fight.
+Graveyard: [Vesta, Milo, Bertha, Harold, Merlin, Agnes]
+===========================================================================
+Duel 7
+Ursula (Wizard)  hp: 21  mana: 15  intelligence:42   versus   Circe (Wizard)  hp: 5  mana: 0  intelligence:47
+
+Round 1:   Ursula threw a Fireball.   Staff hit by Circe.
+
+
+Circe has died. You won this fight!
+Graveyard: [Vesta, Milo, Bertha, Harold, Merlin, Agnes, Circe]
+===========================================================================
+
+You have defeated all of your opponents!
+
+
+__  ______  __  __   _       ______  _   __   __
+\ \/ / __ \/ / / /  | |     / / __ \/ | / /  / /
+ \  / / / / / / /   | | /| / / / / /  |/ /  / / 
+ / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  
+/_/\____/\____/     |__/|__/\____/_/ |_/  (_)   
