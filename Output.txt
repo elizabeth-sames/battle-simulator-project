@@ -1,61 +1,157 @@
-                      Welcome to the Battle!
-    -----------------------------------------------------------------
+
+     Welcome to the Battle!
+    ------------------------
 
 
-Your battle party had those members:  
-Osiris (Wizard)  hp: 98  mana: 25  intelligence:4
-Ren (Wizard)  hp: 99  mana: 13  intelligence:28
-Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Osiris (Wizard)  hp: 98  mana: 25  intelligence:4
-Your opponent has chosen: Olive (Wizard)  hp: 66  mana: 29  intelligence:7
+Duel 1
+Your battle party had these members:  
+Imelda (Warrior)  hp: 189  stamina: 49  strength:1
+Fredo (Wizard)  hp: 71  mana: 31  intelligence:23
+Walter (Warrior)  hp: 125  stamina: 13  strength:7
+Vesta (Wizard)  hp: 97  mana: 41  intelligence:14
+
+You have chosen: Fredo (Wizard)  hp: 71  mana: 31  intelligence:23
+Your opponent has chosen: Luther (Warrior)  hp: 180  stamina: 46  strength:10
+
+Round 1:   Fredo threw a Fireball.   Luther launched a Heavy Attack.
+Round 2:   Fredo threw a Fireball.   Luther launched a Heavy Attack.
+Round 3:   Fredo threw a Fireball.   Luther launched a Heavy Attack.
+Round 4:   Fredo threw a Fireball.   Luther launched a Heavy Attack.
+Round 5:   Fredo threw a Fireball.   Luther launched a Heavy Attack.
+Round 6:   Fredo threw a Fireball.   Luther launched a Heavy Attack.
+Round 7:   Staff hit by Fredo.   Luther launched a Heavy Attack.
+Round 8:   Staff hit by Fredo.   Luther launched a Heavy Attack.
+
+
+Fredo has died. Your opponent won this fight.
+Graveyard: [Fredo]
+===========================================================================
+Duel 2
+Your battle party had these members:  
+Imelda (Warrior)  hp: 189  stamina: 49  strength:1
+Walter (Warrior)  hp: 125  stamina: 13  strength:7
+Vesta (Wizard)  hp: 97  mana: 41  intelligence:14
+
+You have chosen: Vesta (Wizard)  hp: 97  mana: 41  intelligence:14
+Your opponent has chosen: Minerva (Wizard)  hp: 85  mana: 16  intelligence:3
+
+Round 1:   Vesta threw a Fireball.   Minerva threw a Fireball.
+Round 2:   Vesta threw a Fireball.   Minerva threw a Fireball.
+Round 3:   Vesta threw a Fireball.   Minerva threw a Fireball.
+Round 4:   Vesta threw a Fireball.   Minerva threw a Fireball.
+Round 5:   Vesta threw a Fireball.   Minerva threw a Fireball.
+Round 6:   Vesta threw a Fireball.   Staff hit by Minerva.
+Round 7:   Vesta threw a Fireball.   Staff hit by Minerva.
+
+
+Minerva has died. You won this fight!
+Graveyard: [Fredo, Minerva]
+===========================================================================
+Duel 3
+Your battle party had these members:  
+Imelda (Warrior)  hp: 189  stamina: 49  strength:1
+Walter (Warrior)  hp: 125  stamina: 13  strength:7
+Vesta (Wizard)  hp: 80  mana: 6  intelligence:14
+
+You have chosen: Vesta (Wizard)  hp: 80  mana: 6  intelligence:14
+Your opponent has chosen: Otto (Warrior)  hp: 194  stamina: 37  strength:10
+
+Round 1:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 2:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 3:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 4:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 5:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 6:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 7:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 8:   Vesta threw a Fireball.   Otto launched a Heavy Attack.
+Round 9:   Staff hit by Vesta.   Otto launched a Heavy Attack.
+
+
+Vesta has died. Your opponent won this fight.
+Graveyard: [Fredo, Minerva, Vesta]
+===========================================================================
+Duel 4
+Your battle party had these members:  
+Imelda (Warrior)  hp: 189  stamina: 49  strength:1
+Walter (Warrior)  hp: 125  stamina: 13  strength:7
+
+You have chosen: Walter (Warrior)  hp: 125  stamina: 13  strength:7
+Your opponent has chosen: Otto (Warrior)  hp: 152  stamina: 4  strength:10
+
+Round 1:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 2:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 3:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 4:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 5:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 6:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 7:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 8:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 9:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 10:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 11:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 12:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 13:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 14:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 15:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 16:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 17:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 18:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 19:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 20:   Walter launched a Heavy Attack.   Otto launched a Heavy Attack.
+Round 21:   Weak Attack by Walter.   Otto launched a Heavy Attack.
+
+
+Walter has died. Your opponent won this fight.
+Graveyard: [Fredo, Minerva, Vesta, Walter]
+===========================================================================
+Duel 5
+Your battle party had these members:  
+Imelda (Warrior)  hp: 189  stamina: 49  strength:1
+
+You have chosen: Imelda (Warrior)  hp: 189  stamina: 49  strength:1
+Your opponent has chosen: Luther (Warrior)  hp: 38  stamina: 6  strength:10
+
+
+Round 1:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 2:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 3:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 4:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 5:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 6:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 7:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 8:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 9:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 10:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 11:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 12:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 13:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 14:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 15:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 16:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 17:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 18:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 19:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 20:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 21:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 22:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 23:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 24:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 25:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 26:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 27:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 28:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 29:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 30:   Imelda launched a Heavy Attack.   Luther launched a Heavy Attack.
+Round 31:   Weak Attack by Imelda.   Luther launched a Heavy Attack.
+Round 32:   Weak Attack by Imelda.   Luther launched a Heavy Attack.
+
+
+Imelda has died. Your opponent won this fight.
+Graveyard: [Fredo, Minerva, Vesta, Walter, Imelda]
 ===========================================================================
 
-Your battle party had those members:  
-Osiris (Wizard)  hp: 8  mana: 2  intelligence:4
-Ren (Wizard)  hp: 99  mana: 13  intelligence:28
-Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Osiris (Wizard)  hp: 8  mana: 2  intelligence:4
-Your opponent has chosen: Elric (Wizard)  hp: 79  mana: 22  intelligence:2
-===========================================================================
+All of your fighters have died.
 
-Your battle party had those members:  
-Ren (Wizard)  hp: 99  mana: 13  intelligence:28
-Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Ren (Wizard)  hp: 99  mana: 13  intelligence:28
-Your opponent has chosen: Lazar (Wizard)  hp: 63  mana: 26  intelligence:3
-===========================================================================
-
-Your battle party had those members:  
-Ren (Wizard)  hp: 82  mana: 1  intelligence:28
-Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Ren (Wizard)  hp: 82  mana: 1  intelligence:28
-Your opponent has chosen: Elric (Wizard)  hp: 71  mana: 2  intelligence:2
-===========================================================================
-
-Your battle party had those members:  
-Ren (Wizard)  hp: 58  mana: 1  intelligence:28
-Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Ren (Wizard)  hp: 58  mana: 1  intelligence:28
-Your opponent has chosen: Igor (Warrior)  hp: 169  stamina: 39  strength:8
-===========================================================================
-
-Your battle party had those members:  
-Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Igor (Warrior)  hp: 123  stamina: 15  strength:1
-Your opponent has chosen: Igor (Warrior)  hp: 127  stamina: 5  strength:8
-===========================================================================
-
-Your battle party had those members:  
-Marco (Warrior)  hp: 114  stamina: 43  strength:2
-You have chosen: Marco (Warrior)  hp: 114  stamina: 43  strength:2
-Your opponent has chosen: Igor (Warrior)  hp: 121  stamina: 1  strength:8
-===========================================================================
 
 __  ______  __  __   __    ____  ___________
 \ \/ / __ \/ / / /  / /   / __ \/ ___/_  __/
