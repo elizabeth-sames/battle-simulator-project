@@ -20,6 +20,11 @@ public class Battle {
             " \\  / / / / / / /  / /   / / / /\\__ \\ / /   \n" +
             " / / /_/ / /_/ /  / /___/ /_/ /___/ // /    \n" +
             "/_/\\____/\\____/  /_____/\\____//____//_/     \n";
+    private static String tieMessage = "    __________   _________    ___       ________________   __\n" +
+            "   /  _/_  __/  /  _/ ___/   /   |     /_  __/  _/ ____/  / /\n" +
+            "   / /  / /     / / \\__ \\   / /| |      / /  / // __/    / / \n" +
+            " _/ /  / /    _/ / ___/ /  / ___ |     / / _/ // /___   /_/  \n" +
+            "/___/ /_/    /___//____/  /_/  |_|    /_/ /___/_____/  (_) ";
 
 
     public Battle(Party playersParty, Party opponentsParty) {
@@ -106,41 +111,13 @@ public class Battle {
         declareWinner(scanner, writer);
     }
 
-    public void fullBattleRandom(Scanner scanner, Writer writer) throws IOException {
-        int i = 1;
-        while (playersParty.getSize() > 0 && opponentsParty.getSize() > 0) {
-            System.out.println("Duel " + i);
-            writer.write("Duel " + i + "\n");
-            int indexPlayer =  (int) Math.floor(Math.random()*(playersParty.getSize()));
-            int indexOpponent = (int) Math.floor(Math.random() * opponentsParty.getSize());
-            System.out.println(playersParty.getMembers().get(indexOpponent).toString() + "   versus   "
-                    + opponentsParty.getMembers().get(indexOpponent).toString());
-            writer.write(playersParty.getMembers().get(indexOpponent).toString() + "   versus   "
-                    + opponentsParty.getMembers().get(indexOpponent).toString() + "\n\n");
-            this.twoPlayersFight(indexPlayer, indexOpponent, writer);
-            writer.write("\n===========================================================================\n");
-            i++;
-        }
-        declareWinner(scanner, writer);
-    }
-
     public void declareWinner(Scanner scanner, Writer writer) throws IOException {
         if (opponentsParty.getSize() == 0 && playersParty.getSize()==0) {
 
             System.out.println("\nIt's a tie!");
             writer.write("IT'S A TIE");
-            System.out.println("    __________   _________    ___       ________________   __\n" +
-                    "   /  _/_  __/  /  _/ ___/   /   |     /_  __/  _/ ____/  / /\n" +
-                    "   / /  / /     / / \\__ \\   / /| |      / /  / // __/    / / \n" +
-                    " _/ /  / /    _/ / ___/ /  / ___ |     / / _/ // /___   /_/  \n" +
-                    "/___/ /_/    /___//____/  /_/  |_|    /_/ /___/_____/  (_) ");
-
-
-            writer.write("  __________   _________    ___       ________________   __\n" +
-                    "   /  _/_  __/  /  _/ ___/   /   |     /_  __/  _/ ____/  / /\n" +
-                    "   / /  / /     / / \\__ \\   / /| |      / /  / // __/    / / \n" +
-                    " _/ /  / /    _/ / ___/ /  / ___ |     / / _/ // /___   /_/  \n" +
-                    "/___/ /_/    /___//____/  /_/  |_|    /_/ /___/_____/  (_) ");
+            System.out.println(tieMessage);
+            writer.write(tieMessage);
 
 
         } else if (opponentsParty.getSize() == 0 ) {
@@ -148,36 +125,13 @@ public class Battle {
             writer.write("\nYou have defeated all of your opponents!\n\n");
             System.out.println(winMessage);
             writer.write(winMessage);
-//            //System.out.println("\n__  ______  __  __   _       ______  _   __   __\n" +
-//                    "\\ \\/ / __ \\/ / / /  | |     / / __ \\/ | / /  / /\n" +
-//                    " \\  / / / / / / /   | | /| / / / / /  |/ /  / / \n" +
-//                    " / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  \n" +
-//                    "/_/\\____/\\____/     |__/|__/\\____/_/ |_/  (_)   \n" +
-//                    "                                              ");
-//            //writer.write("__  ______  __  __   _       ______  _   __   __\n" +
-//                    "\\ \\/ / __ \\/ / / /  | |     / / __ \\/ | / /  / /\n" +
-//                    " \\  / / / / / / /   | | /| / / / / /  |/ /  / / \n" +
-//                    " / / /_/ / /_/ /    | |/ |/ / /_/ / /|  /  /_/  \n" +
-//                    "/_/\\____/\\____/     |__/|__/\\____/_/ |_/  (_)   \n" +
-//                    "                                              ");
+
         }else{
             System.out.println("\nAll of your fighters have died.");
             writer.write("\nAll of your fighters have died.\n\n");
             System.out.println(loseMessage);
             writer.write(loseMessage);
-//            System.out.println("\n__  ______  __  __   __    ____  ___________\n" +
-//                    "\\ \\/ / __ \\/ / / /  / /   / __ \\/ ___/_  __/\n" +
-//                    " \\  / / / / / / /  / /   / / / /\\__ \\ / /   \n" +
-//                    " / / /_/ / /_/ /  / /___/ /_/ /___/ // /    \n" +
-//                    "/_/\\____/\\____/  /_____/\\____//____//_/     \n" +
-//                    "                                      ");
-//
-//            writer.write("__  ______  __  __   __    ____  ___________\n" +
-//                    "\\ \\/ / __ \\/ / / /  / /   / __ \\/ ___/_  __/\n" +
-//                    " \\  / / / / / / /  / /   / / / /\\__ \\ / /   \n" +
-//                    " / / /_/ / /_/ /  / /___/ /_/ /___/ // /    \n" +
-//                    "/_/\\____/\\____/  /_____/\\____//____//_/     \n" +
-//                    "                                      ");
+
         }
     }
 }
