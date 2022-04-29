@@ -1,9 +1,6 @@
 package classes;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.Writer;
+import java.io.*;
 import java.util.*;
 
 public class Party {
@@ -17,7 +14,8 @@ public class Party {
         this.members = new ArrayList<>();
     }
 
-    public void makeRandomParty() {
+    public void makeRandomParty() throws IOException {
+        //FileWriter writer2 = new FileWriter("import-parties.csv", true);
         Random rand = new Random();
         List<String> usedNames = new ArrayList<>();
         while(this.members.size() < 4){
@@ -28,17 +26,22 @@ public class Party {
                 newWarrior.changeNameIfDuplicate(usedNames);
                 usedNames.add(newWarrior.getName().toLowerCase());
                 this.members.add(newWarrior);
+                //writer2.write(newWarrior.warriorData());
             } else {
                 Wizard newWizard = new Wizard();
                 newWizard.makeRandom();
                 newWizard.changeNameIfDuplicate(usedNames);
                 usedNames.add(newWizard.getName().toLowerCase());
                 this.members.add(newWizard);
-            };
-        };
-    };
+                //writer2.write(newWizard.wizardData());
 
-    public void makeCustomParty(Scanner scanner) {
+            }
+        }
+        //writer2.close();
+    }
+
+    public void makeCustomParty(Scanner scanner) throws FileNotFoundException {
+        //PrintWriter writer2 = new PrintWriter("exported-parties.csv");
         List<String> usedNames = new ArrayList<>();
         while(this.members.size()<4) {
             System.out.println(
@@ -59,6 +62,7 @@ public class Party {
                 usedNames.add(newWarrior.getName().toLowerCase());
                 System.out.println(newWarrior);
                 this.members.add(newWarrior);
+                //writer2.write(newWarrior.warriorData());
             } else {
                 //make a wizard
                 Wizard newWizard = new Wizard();
@@ -67,41 +71,40 @@ public class Party {
                 usedNames.add(newWizard.getName().toLowerCase());
                 System.out.println(newWizard);
                 this.members.add(newWizard);
+                //writer2.write(newWizard.wizardData());
+            }
+        }
+        //writer2.close();
+    }
+
+    public void makeCsvParty(File file) throws FileNotFoundException {
+        List<String> usedNames = new ArrayList<>();
+        Scanner scanner = new Scanner(file);
+        while(this.members.size() < 4 && scanner.hasNextLine()){
+            String data = scanner.nextLine();
+            String[] dataArray = data.split(",");
+            if(dataArray[0].equals("Warrior")) {
+                Warrior newWarrior = new Warrior();
+                newWarrior.setName(dataArray[1]);
+                newWarrior.changeNameIfDuplicate(usedNames);
+                usedNames.add(newWarrior.getName());
+                newWarrior.setHp(Integer.parseInt(dataArray[2]));
+                newWarrior.setStamina(Integer.parseInt(dataArray[3]));
+                newWarrior.setStrength(Integer.parseInt(dataArray[4]));
+                this.members.add(newWarrior);
+            } else {
+                Wizard newWizard = new Wizard();
+                newWizard.setName(dataArray[1]);
+                newWizard.changeNameIfDuplicate(usedNames);
+                usedNames.add(newWizard.getName());
+                newWizard.setHp(Integer.parseInt(dataArray[2]));
+                newWizard.setMana(Integer.parseInt(dataArray[3]));
+                newWizard.setIntelligence(Integer.parseInt(dataArray[4]));
+                this.members.add(newWizard);
             }
         }
     }
 
-    public void makeCsvParty() throws FileNotFoundException {
-        List<String> usedNames = new ArrayList<>();
-        while(this.members.size() < 4){
-            File file = new File("party1.csv");
-            //Scanner scanner = new Scanner("party1.csv");
-            Scanner scanner = new Scanner(file);
-            while(scanner.hasNextLine()) {
-                String data = scanner.nextLine();
-                String[] dataArray = data.split(",");
-                if(dataArray[0].equals("Warrior")) {
-                    Warrior newWarrior = new Warrior();
-                    newWarrior.setName(dataArray[2]);
-                    newWarrior.changeNameIfDuplicate(usedNames);
-                    usedNames.add(newWarrior.getName());
-                    newWarrior.setHp(Integer.parseInt(dataArray[3]));
-                    newWarrior.setStamina(Integer.parseInt(dataArray[5]));
-                    newWarrior.setStrength(Integer.parseInt(dataArray[6]));
-                    this.members.add(newWarrior);
-                } else {
-                    Wizard newWizard = new Wizard();
-                    newWizard.setName(dataArray[2]);
-                    newWizard.changeNameIfDuplicate(usedNames);
-                    usedNames.add(newWizard.getName());
-                    newWizard.setHp(Integer.parseInt(dataArray[3]));
-                    newWizard.setMana(Integer.parseInt(dataArray[7]));
-                    newWizard.setIntelligence(Integer.parseInt(dataArray[8]));
-                    this.members.add(newWizard);
-                }
-            }
-        }
-    }
 
 
 

@@ -1,5 +1,6 @@
 package classes;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Warrior extends Character {
@@ -65,7 +66,7 @@ public class Warrior extends Character {
 
 
 
-    @Override
+
     public String toString() {
         return this.getName() + " (Warrior)  hp: " + this.getHp() + "  stamina: " + this.stamina
                 + "  strength:" + strength;
@@ -123,5 +124,23 @@ public class Warrior extends Character {
         } else {
             return "Weak Attack by " + this.getName();
         }
+    }
+
+//    public String warriorData() {
+//        String data = this.characterType + ", " + super.getName()+ ", " + super.getHp() + ", " + this.stamina + ", " + this.strength + "\n";
+//        return data;
+//    }
+
+//    public String warriorData() {
+//        return "characterType=Warrior,name=" + super.getName() + ",hp=" + super.getHp() +
+//                ",stamina=" + stamina +
+//                ",strength=" + strength +
+//                '\'';
+//    }
+    public String warriorData() {
+        return "Warrior," + super.getName() + "," + super.getHp() +
+                "," + stamina +
+                "," + strength +
+                "\n";
     }
 }

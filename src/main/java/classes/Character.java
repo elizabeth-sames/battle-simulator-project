@@ -20,7 +20,6 @@ public abstract class Character implements Attacker {
         this.id = totalCharacterCount;
         this.name = name;
         this.hp = hp;
-
     }
 
     public Character() {
