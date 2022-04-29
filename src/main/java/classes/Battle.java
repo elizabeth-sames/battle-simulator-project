@@ -95,6 +95,7 @@ public class Battle {
 
     public void declareWinner(Scanner scanner, Writer writer) throws IOException {
         if (opponentsParty.getSize() == 0 && playersParty.getSize()==0) {
+
             System.out.println("\nIt's a tie!");
             writer.write("IT'S A TIE");
             System.out.println("    __________   _________    ___       ________________   __\n" +
@@ -109,6 +110,10 @@ public class Battle {
                     "   / /  / /     / / \\__ \\   / /| |      / /  / // __/    / / \n" +
                     " _/ /  / /    _/ / ___/ /  / ___ |     / / _/ // /___   /_/  \n" +
                     "/___/ /_/    /___//____/  /_/  |_|    /_/ /___/_____/  (_) ");
+
+
+            System.out.println("IT'S A TIE");
+            writer.write("IT'S A TIE");
 
         } else if (opponentsParty.getSize() == 0 ) {
             System.out.println("\nYou have defeated all of your opponents!");
